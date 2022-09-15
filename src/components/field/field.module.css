@@ -1,0 +1,13 @@
+
+ .field {
+	 margin-bottom: 14px;
+	 color: rgb(0 0 0 / 87%);
+}
+ .field.labelLeft {
+	 display: flex;
+	 align-items: center;
+}
+ .field.labelLeft .fieldInput {
+	 flex-grow: 0.5;
+}
+ 
