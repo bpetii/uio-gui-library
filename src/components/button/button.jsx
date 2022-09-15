@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import buttonStyles from './button.module.css';
 
-const Button = ({
+export const Button = ({
   active,
   basic,
   colored,
@@ -91,5 +91,3 @@ Button.propTypes = {
   width: PropTypes.string,
   pill: PropTypes.bool,
 };
-
-export default Button
