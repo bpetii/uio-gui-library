@@ -1,0 +1,86 @@
+ .checkbox {
+	 margin: 10px 0 11px 0;
+	 position: relative;
+	 display: inline-block;
+	 backface-visibility: hidden;
+	 vertical-align: baseline;
+	 font-style: normal;
+	 min-height: 17px;
+	 font-size: inherit;
+	 line-height: 17px;
+	 min-width: 17px;
+	 outline: 0px;
+}
+ .checkbox.noLabel {
+	 width: 17px;
+}
+ .checkbox.small {
+	 margin: 3px 0;
+	 font-size: 12px;
+}
+ .checkbox input {
+	 cursor: pointer;
+	 position: absolute;
+	 top: 0px;
+	 left: 0px;
+	 width: 17px;
+	 height: 17px;
+	 opacity: 0 !important;
+	 outline: 0px;
+	 z-index: -1;
+}
+ .checkbox label {
+	 cursor: pointer;
+	 user-select: none;
+	 color: rgb(0 0 0 / 87%);
+	 transition: color 0.1s ease 0s;
+	 position: relative;
+	 display: block;
+	 padding-left: 1.85714em;
+	 font-size: 1em;
+	 outline: 0px;
+}
+ .checkbox label .checkmark {
+	 position: absolute;
+	 top: 0px;
+	 left: 0px;
+	 width: 17px;
+	 height: 17px;
+	 padding: 2px;
+	 background: white;
+	 border-radius: 0.214286rem;
+	 transition: border 0.1s ease 0s, opacity 0.1s ease 0s, transform 0.1s ease 0s, box-shadow 0.1s ease 0s;
+	 border: 1px solid #ddd;
+	 color: transparent;
+}
+ .checkbox label .checkmark:hover {
+	 border-color: #bbb;
+}
+ .checkbox input:checked ~ label .checkmark {
+	 background: #3399ff;
+	 border-color: transparent;
+	 color: white;
+}
+ .checkbox.disabled {
+	 cursor: default;
+	 pointer-events: none;
+}
+ .checkbox.disabled label {
+	 color: #acabab;
+}
+ .checkbox.disabled .checkmark {
+	 background: #acabab !important;
+	 border-color: #acabab !important;
+}
+ .checkbox.disabled input:checked ~ label .checkmark {
+	 color: #acabab;
+}
+ .noMargin {
+	 margin: 0;
+}
+ .isInTable {
+	 margin: 0;
+	 position: relative;
+	 top: 1px;
+}
+ 
