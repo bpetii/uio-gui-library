@@ -1,0 +1,9 @@
+.chevron {
+    margin-right: 10px;
+    font-size: 11px;
+    transition: transform 0.3s;
+    color: #7d7b7a;
+}
+.chevron.expanded {
+    transform: rotate(90deg);
+}
