@@ -1,0 +1,46 @@
+ .accordion {
+	 position: relative;
+	 color: rgb(0 0 0 / 87%);
+}
+ .accordion .accordionHeader {
+	 display: flex;
+	 align-items: center;
+}
+ .accordion .accordionHeader .heading {
+	 flex-grow: 1;
+}
+ .accordion .accordionHeader.clickable:hover {
+	 cursor: pointer;
+}
+ .accordion .accordionHeader.clickable:hover > * {
+	 color: rgb(0 0 0 / 87%) !important;
+}
+ .accordion:not(.bordered) .accordionHeader {
+	 margin-bottom: 15px;
+}
+ .accordion.bordered .accordionHeader, .accordion.bordered .accordionContent {
+	 border: 1px solid #ddd;
+	 line-height: 20px;
+}
+ .accordion.bordered .accordionHeader {
+	 padding: 10px 15px;
+	 border-radius: 4px;
+	 background-color: #f5f7f9;
+}
+ .accordion.bordered.expanded .accordionHeader {
+	 border-bottom-left-radius: 0;
+	 border-bottom-right-radius: 0;
+}
+ .accordion.bordered .accordionContent {
+	 border-top: none;
+	 border-radius: 0 0 4px 4px;
+	 background-color: white;
+}
+ .accordion.bordered .accordionContent.padding {
+	 padding: 10px 15px;
+}
+ .accordion.bordered.squareBottom .accordionHeader {
+	 border-bottom-left-radius: 0;
+	 border-bottom-right-radius: 0;
+}
+ 
