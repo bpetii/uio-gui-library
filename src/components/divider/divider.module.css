@@ -1,0 +1,23 @@
+ .divider {
+	 display: flex;
+	 align-items: center;
+	 text-align: center;
+}
+ .divider::before, .divider::after {
+	 content: '';
+	 flex: 1;
+	 border-bottom: 1px solid #DDDDDD;
+}
+ .alignLeft::before {
+	 flex-grow: 0.05;
+}
+ .alignRight::after {
+	 flex-grow: 0.05;
+}
+ .divider:not(:empty)::before {
+	 margin-right: 0.25em;
+}
+ .divider:not(:empty)::after {
+	 margin-left: 0.25em;
+}
+ 
