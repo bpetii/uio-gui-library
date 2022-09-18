@@ -1,0 +1,11 @@
+
+
+.cellWrapper {
+    padding: 9.5px 14px !important;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

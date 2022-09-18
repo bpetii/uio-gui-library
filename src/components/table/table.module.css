@@ -1,0 +1,120 @@
+:root {
+    --color-background-table-header: #E9ECEE;
+    --color-background-table-row-tinted: #F8F9F9;
+}
+
+/* Border-Box */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+
+.table {
+    width: 100%;
+    background: white;
+    box-shadow: none;
+    text-align: left;
+    color: var(--color-text);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: inherit;
+}
+.table.bordered {
+    border: 1px solid #ddd;
+    border-radius: 0.28571429rem;
+}
+.table > :first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.table > :first-child > :first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.table > :first-child > :first-child > :first-child {
+    border-top-left-radius: inherit;
+}
+.table > :first-child > :first-child > :last-child {
+    border-top-right-radius: inherit;
+}
+.table > :last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+.table > :last-child > :last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+.table > :last-child > :last-child > :first-child {
+    border-bottom-left-radius: inherit;
+}
+.table > :last-child > :last-child > :last-child {
+    border-bottom-right-radius: inherit;
+}
+.maxHeight {
+    display: block;
+    overflow-y: auto;
+}
+.maxHeight tfoot td {
+    position: sticky;
+    bottom: 0;
+}
+th, td {
+    line-height: 17px;
+    height: 36px;
+    border-left: 1px solid #ddd;
+}
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+
+.cellWrapper {
+    padding: 9.5px 14px !important;
+  }
+
+@-moz-document url-prefix() {
+    tr {
+        height: 36px;
+   }
+    td {
+        height: 100%;
+   }
+}
+thead th, tfoot td {
+    background-color: var(--color-background-table-header);
+}
+thead th {
+    cursor: auto;
+    text-align: inherit;
+    color: var(--color-text);
+    padding: 0.92857143em 0.78571429em;
+    vertical-align: inherit;
+    font-style: none;
+    font-weight: 700;
+    text-transform: none;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+td {
+    border-top: 1px solid #ddd;
+}
+tr:first-child td {
+    border-top: none;
+}
+.title, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.striped tbody tr:nth-child(even) {
+    background-color: var(--color-background-table-row-tinted);
+}
+tfoot td {
+    border-top: 1px solid #ddd !important;
+    padding: 8px 12px;
+}

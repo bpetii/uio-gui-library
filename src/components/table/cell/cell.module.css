@@ -1,0 +1,23 @@
+
+
+.cellWrapper {
+    padding: 9.5px 14px !important;
+}
+ .breakWord {
+	 word-break: break-word;
+}
+ .sliderCell {
+	 padding-top: 0 !important;
+	 padding-bottom: 0 !important;
+}
+
+ .rightAligned {
+	 text-align: right !important;
+}
+ .centerAligned {
+	 text-align: center !important;
+}
+ .leftAligned {
+	 text-align: left !important;
+}
+ 
