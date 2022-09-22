@@ -1,185 +1,131 @@
-import React from 'react';
-import * as PropTypes from 'prop-types';
-import {
-  CustomSelect,
-  selectOptionShape,
-  selectedOptionsShape,
-} from './custom-select/custom-select';
-import { standardizeInputs } from './select.input';
+import React, {useEffect} from 'react'
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import styles from './select.module.css';
+import { useState } from 'react';
+import { useRef } from 'react';
 
-export const Select = (props) => {
-  const {
-    name,
-    options: rawOptions = [],
-    value: rawSelectedOptions,
+export const CustomSelect = ({
+    value,
     onChange,
-    deprecatedEventHandler,
-    warning,
-    error,
-    checkNonExistentValues,
-    closeOnOptionActionClick,
-  } = props;
-  const {
-    multi,
-    simpleInputs,
     options,
-    selectedOptions,
-    firstSelectedOptionIndex,
-    hasNonExistentValue,
-  } = standardizeInputs(
-    rawOptions,
-    rawSelectedOptions,
-    checkNonExistentValues,
-  );
+    multiple
+}) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [highlitedIndex, setHighlitedIndex] = useState(0);
+    const containerRef = useRef(null);
 
-  const nonExistentWarning = 'Value no longer available for re-selection';
-  const fullWarning = hasNonExistentValue ? (
-    warning ? (
-      <div>
-        <div>{nonExistentWarning}</div>
-        <div>{warning}</div>
-      </div>
-    ) : (
-      nonExistentWarning
-    )
-  ) : (
-    warning
-  );
+    useEffect(() => {
+      setHighlitedIndex(0);
+    }, [isOpen])
 
-  const fullError =
-    hasNonExistentValue && error ? (
-      <div>
-        <div>{nonExistentWarning}</div>
-        <div>{error}</div>
-      </div>
-    ) : (
-      error
-    );
-
-  const onChangeSelectedValue = (evt, selectedOptions) => {
-    if (deprecatedEventHandler) {
-      const newSelectedOptions = multi
-        ? selectedOptions.map((o) => (simpleInputs ? o.value : o))
-        : simpleInputs
-        ? selectedOptions.value
-        : selectedOptions;
-      onChange(newSelectedOptions);
-    } else {
-      /*
-        - For React synthetic events, mutate the values and forward the event
-        - For native (keyboard) events, clone the enumerable properties and forward
-        - Explanation:
-          https://gitlab.com/oliasoft-open-source/react-ui-library/-/issues/77
-      */
-      const isSyntheticEvent = !(evt instanceof Event);
-      const value = multi ? selectedOptions : selectedOptions.value;
-      if (isSyntheticEvent) {
-        evt.target.name = name;
-        evt.target.value = value;
-        if (!multi) {
-          evt.target.label = selectedOptions.label;
+    useEffect(()=> {
+      const handler = (e) => {
+        console.log(e.code);
+        if (e.target !== containerRef.current) return;
+        switch(e.code) {
+          case 'Enter':
+          case 'Space': {
+            setIsOpen(true);
+            if (isOpen) selectOption(options[highlitedIndex])
+            break;
+          }
+          case 'ArrowUp':
+          case 'ArrowDown': {
+            console.log(isOpen);
+            if (!isOpen) {
+              setIsOpen(true)
+            }
+            const newValue = highlitedIndex + (e.code === "ArrowDown" ? 1 : -1)
+            if (newValue >=0 && newValue < options.length) {
+              setHighlitedIndex(newValue);
+              break;
+            }
+            break;
+          }
+          default: {}
         }
-        onChange(evt);
+      }
+        containerRef.current?.addEventListener("keydown", handler);
+
+        return () => {
+          containerRef.current?.removeEventListener("keydown", handler);
+        }
+    }, [isOpen, highlitedIndex, options])
+
+    const clearOptions = () => {
+      multiple? onChange([]) : onChange(null)
+    }
+
+    const selectOption = (option) => {
+      if (multiple) {
+        if (value.includes(option)) {
+          onChange(value.filter(v => v !== option))
+        } else {
+          onChange([...value, option])
+        }
+
       } else {
-        onChange({
-          ...evt,
-          target: {
-            ...evt.target,
-            name,
-            value,
-            ...(!multi && { label: selectedOptions.label }),
-          },
-        });
+        if (option !== value) onChange(option);
+        setIsOpen(false)
       }
     }
-  };
+
+    const isSelectedOption = (option) => {
+      return multiple ? value.includes(option) : option===value;
+    }
 
   return (
-    <CustomSelect
-      {...props} // eslint-disable-line react/jsx-props-no-spreading
-      options={options}
-      selectedOptions={selectedOptions}
-      onChange={onChangeSelectedValue}
-      multi={multi}
-      firstSelectedOptionIndex={firstSelectedOptionIndex}
-      warning={fullWarning}
-      error={fullError}
-      testId={testId}
-      closeOnOptionActionClick={closeOnOptionActionClick}
-    />
+    <div 
+        ref = {containerRef}
+        onBlur={() => setIsOpen(false)}
+        onClick={() => setIsOpen(prev => !prev)} 
+        tabIndex={0} 
+        className={styles.container} 
+    >
+        <span data-placeholder="Select..." className={styles.value}>
+          {
+           multiple ? value?.map(v => (
+           <button 
+            key={v.value} 
+            className={styles.optionBtn}
+            onClick={ e => {
+              e.stopPropagation();
+              selectOption(v)
+            }}>
+              {v.label}
+              <span className={styles.removeBtn}>&times;</span>
+            </button>))
+          : value?.label
+        }</span>
+        <button onClick={ e => {
+          e.stopPropagation();
+          clearOptions();
+        }
+
+          } className={styles.clearBtn}>&times;</button>
+        <div className={styles.divider}></div>
+        <div className={styles.caret}></div>
+        <ul className={cx(styles.options, options.length ? '' : styles.empty, isOpen? styles.show : '')}>
+            {options.length ? options.map((option, index) => (
+                <li 
+                onClick ={e => {
+                  e.stopPropagation();
+                  selectOption(option)
+                }}
+                onMouseEnter = {() => setHighlitedIndex(index)}
+                className={cx(styles.option, isSelectedOption(option) ? styles.selected: '', highlitedIndex === index ? styles.highlighted : '')} 
+                key={option.value}>{option.label}</li>
+            )) : "No matches"}
+        </ul>
+    </div>
   );
 };
 
-Select.defaultProps = {
-  autoLayerWidth: false,
-  borderRadius: null,
-  clearable: false,
-  disabled: false,
-  error: null,
-  firstSelectedOptionIndex: null,
-  groupOrder: null,
-  isInTable: false,
-  multi: false,
-  onBlur: () => {},
-  onChange: () => {},
-  onCreate: null,
-  onFocus: () => {},
-  right: false,
-  searchable: true,
-  selectedOption: null,
-  selectedOptions: null,
-  small: false,
-  tabIndex: 0,
-  tooltip: null,
-  warning: null,
-  width: null,
-  checkNonExistentValues: true,
-  closeOnOptionActionClick: true,
-  testId: undefined,
+CustomSelect.defaultProps = {
+    options: []
 };
 
-const SelectShape = {
-  name: PropTypes.string,
-  disabled: PropTypes.bool,
-  error: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.node,
-  ]),
-  warning: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.node,
-  ]),
-  tooltip: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.node,
-  ]),
-  options: PropTypes.arrayOf(selectOptionShape).isRequired,
-  value: selectedOptionsShape,
-  onChange: PropTypes.func,
-  onCreate: PropTypes.func,
-  small: PropTypes.bool,
-  tabIndex: PropTypes.number,
-  width: PropTypes.string,
-  autoLayerWidth: PropTypes.bool,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
-  searchable: PropTypes.bool,
-  clearable: PropTypes.bool,
-  maxTooltipWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  autoScroll: PropTypes.bool,
-  checkNonExistentValues: PropTypes.bool,
-  testId: PropTypes.string,
-  closeOnOptionActionClick: PropTypes.bool,
-  //native select only:
-  borderRadius: PropTypes.number,
-  //deprecated props:
-  deprecatedEventHandler: PropTypes.bool,
-  //private props (don't use)
-  isInTable: PropTypes.bool,
-  right: PropTypes.bool,
+CustomSelect.propTypes = {
+    options: PropTypes.array,
 };
-
-Select.propTypes = PropTypes.shape(SelectShape).isRequired;

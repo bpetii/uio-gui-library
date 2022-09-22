@@ -12,6 +12,7 @@
     "react-dom": "^18.0.0",
     "react-icons": "^4.4.0",
     "react-scripts": "5.0.0",
+    "react-select": "^5.4.0",
     "react-svg": "^15.1.9",
     "web-vitals": "^2.1.4"
   },
