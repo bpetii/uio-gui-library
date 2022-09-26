@@ -46,5 +46,9 @@ export const Multiple = SelectTemplate.bind({});
 Multiple.args = {value: [options[0]], multiple: true}
 
 
+export const Empty = SelectTemplate.bind({});
+Empty.args = {options: [], value: null}
+
+
 
 

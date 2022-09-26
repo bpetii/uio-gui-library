@@ -49,12 +49,12 @@ CheckBox.defaultProps = {
 };
 
 CheckBox.propTypes = {
+  value: PropTypes.string,
   checked: PropTypes.bool,
   label: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   tabIndex: PropTypes.number,
   disabled: PropTypes.bool,
-  key: PropTypes.string, //deprecated
-  value: PropTypes.string,
+  key: PropTypes.string,
 };

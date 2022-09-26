@@ -54,13 +54,13 @@ span:empty::before {
 
 .optionBtn:hover,
 .optionBtn:focus {
-    background-color: #3399ff;
-    border-color: #3399ff;
+    background-color: #89cff0;
+    border-color: #89cff0;
 }
 
 .optionBtn:hover > .removeBtn,
 .optionBtn:focus > .removeBtn{
-    color:red
+    color: #BC544B;
 }
 
 .optionBtn > .removeBtn {
@@ -93,6 +93,7 @@ span:empty::before {
     left:0;
     top: calc(100% + 0.25em);
     background-color: white;
+    cursor: pointer;
     z-index: 10;
     display: none; 
 }
@@ -111,11 +112,12 @@ span:empty::before {
     padding: 0.25em 0.5em
 }
 
-.option.highlighted {
-    background-color: #3399ff;
+.option.selected {
+    background-color: #26619c !important;
     color: white;
 }
 
-.option.selected {
-    background-color: #3399ff;
+.option.highlighted:hover {
+    background-color: #89cff0;
+    color: white;
 }
