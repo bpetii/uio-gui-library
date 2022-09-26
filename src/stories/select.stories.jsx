@@ -36,14 +36,13 @@ const SelectTemplate = (args) => {
   );
 };
 
-
 export const Default = SelectTemplate.bind({});
 
 export const Selected = SelectTemplate.bind({});
 Selected.args = {value: options[0]}
 
 export const Multiple = SelectTemplate.bind({});
-Multiple.args = {value: [options[0]], multiple: true}
+Multiple.args = {value: [options[0], options[1]], multiple: true}
 
 
 export const Empty = SelectTemplate.bind({});

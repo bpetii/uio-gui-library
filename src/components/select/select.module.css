@@ -113,10 +113,11 @@ span:empty::before {
 }
 
 .option.selected {
-    background-color: #26619c !important;
+    background-color: #26619c;
     color: white;
 }
 
+.option.selected:hover,
 .option.highlighted:hover {
     background-color: #89cff0;
     color: white;

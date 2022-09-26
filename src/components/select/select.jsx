@@ -32,7 +32,6 @@ export const CustomSelect = ({
           }
           case 'ArrowUp':
           case 'ArrowDown': {
-            console.log(isOpen);
             if (!isOpen) {
               setIsOpen(true)
             }
