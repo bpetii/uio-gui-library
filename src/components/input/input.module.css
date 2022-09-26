@@ -3,7 +3,6 @@
 	 margin: 0;
 	 outline: 0;
 	 text-align: left;
-	 font-family: 'Lato', sans-serif;
 	 padding: 9.5px 14px;
 	 background: white;
 	 border: 1px solid #ddd;
@@ -57,4 +56,3 @@ input.warning {
     background-color: hsl(48deg 40% 90%);
   }
 
- 
