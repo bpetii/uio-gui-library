@@ -35,9 +35,9 @@ export const CustomSelect = ({
             if (!isOpen) {
               setIsOpen(true)
             }
-            const newValue = highlitedIndex + (e.code === "ArrowDown" ? 1 : -1)
-            if (newValue >=0 && newValue < options.length) {
-              setHighlitedIndex(newValue);
+            const newValueIndex = highlitedIndex + (e.code === "ArrowDown" ? 1 : -1)
+            if (newValueIndex >=0 && newValueIndex < options.length) {
+              setHighlitedIndex(newValueIndex);
               break;
             }
             break;
