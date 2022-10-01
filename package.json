@@ -1,15 +1,17 @@
 {
   "name": "@bpetii/uio-gui-library",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "A react component library",
   "author": "Peter Biro",
   "dependencies": {
     "@babel/runtime": "^7.19.0",
     "@fontsource/nunito-sans": "^4.5.9",
+    "@modular-css/rollup": "^28.2.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.12",
     "classnames": "^2.3.2",
     "generate-source-map": "0.0.5",
     "lodash": "^4.17.21",
@@ -19,6 +21,7 @@
     "react-scripts": "5.0.0",
     "react-select": "^5.4.0",
     "react-svg": "^15.1.9",
+    "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-postcss": "^4.0.2",
     "web-vitals": "^2.1.4"
   },

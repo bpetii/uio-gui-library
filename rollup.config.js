@@ -1,8 +1,9 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import {babel} from '@rollup/plugin-babel';
-import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
 import requireContext from 'rollup-plugin-require-context';
+import postcss from 'rollup-plugin-postcss'
 
 const packageJson = require("./package.json");
 
@@ -21,7 +22,7 @@ const rollupConfig = [
                 sourcemap:true,
             }
         ],
-        external: [/@babel\runtime/, 'react', /\.css$/],
+        external: [/@babel\runtime/, 'react'],
         plugins: [
             babel({babelHelpers: 'runtime', plugins:['@babel/plugin-transform-runtime']}),
             resolve(),
