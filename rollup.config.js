@@ -27,7 +27,9 @@ const rollupConfig = [
             resolve(),
             commonjs(),
             requireContext(),
-            postcss()
+            postcss({
+                modules: true,
+              })
         ]
     }
 ]
