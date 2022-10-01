@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './card.module.css';
 
-export const Card = ({
+const Card = ({
   bordered,
   heading,
   children,
@@ -49,3 +49,5 @@ Card.propTypes = {
   padding: PropTypes.bool,
   raised: PropTypes.bool,
 };
+
+export default Card;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './loader.module.css';
 
-export const Loader = ({
+const Loader = ({
   width,
   height,
   text,
@@ -51,3 +51,5 @@ Loader.propTypes = {
   children: PropTypes.node,
   theme: PropTypes.string,
 };
+
+export default Loader;

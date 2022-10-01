@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button} from '../components/button/button'
-import {Flex} from '../components/flex/flex'
-import {Spacer} from '../components/spacer/spacer'
+import {Spacer, Flex, Button} from '../index'
 
 export default {
   title: 'Layout/Spacer',

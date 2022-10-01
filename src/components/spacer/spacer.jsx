@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Spacer = ({ height, width, flex }) => (
+const Spacer = ({ height, width, flex }) => (
   <div
     style={{
       display: width ? 'inline-block' : 'block',
@@ -24,3 +24,5 @@ Spacer.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+
+export default Spacer;

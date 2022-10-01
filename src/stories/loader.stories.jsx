@@ -1,6 +1,5 @@
 import React from 'react';
-import { Spinner } from '../components/spinner/spinner';
-import { Loader } from '../components/loader/loader';
+import { Loader, Spinner } from '../index';
 
 export default {
   title: 'Progress/Loader',

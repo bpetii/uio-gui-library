@@ -4,7 +4,7 @@ import cx from "classnames";
 import { FaCheck } from "react-icons/fa";
 import styles from "./checkbox.module.css";
 
-export const CheckBox = ({
+const CheckBox = ({
   tabIndex,
   checked,
   name,
@@ -58,3 +58,5 @@ CheckBox.propTypes = {
   disabled: PropTypes.bool,
   key: PropTypes.string,
 };
+
+export default CheckBox;

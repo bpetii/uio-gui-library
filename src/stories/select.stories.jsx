@@ -1,5 +1,5 @@
 import React from 'react';
-import { CustomSelect as Select } from '../components/select/select';
+import { Select} from '../index';
 import { useArgs } from '@storybook/addons';
 
 const options = [

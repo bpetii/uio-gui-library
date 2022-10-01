@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './badge.module.css';
 
-export const Badge = ({ children, color, title, dot, margin, small }) => {
+const Badge = ({ children, color, title, dot, margin, small }) => {
   const visible = !(title === null && dot === null);
   return (
     <div className={styles.wrapper}>
@@ -43,3 +43,5 @@ Badge.propTypes = {
   margin: PropTypes.string,
   small: PropTypes.bool,
 };
+
+export default Badge;

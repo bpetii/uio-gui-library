@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Chevron } from './chevron/chevron';
+import { Chevron } from './chevron/chevron.jsx';
 import styles from './accordion.module.css';
 
-export const AccordionManaged = ({
+const AccordionManaged = ({
   heading,
   bordered,
   padding,
@@ -30,7 +30,7 @@ export const AccordionManaged = ({
   );
 };
 
-export const AccordionBase = ({
+const AccordionBase = ({
   heading,
   expanded,
   bordered,
@@ -71,7 +71,7 @@ export const AccordionBase = ({
   );
 };
 
-export const Accordion = ({
+const Accordion = ({
   heading,
   expanded,
   managed,
@@ -128,3 +128,5 @@ Accordion.propTypes = {
   squareBottom: PropTypes.bool,
   testId: PropTypes.string,
 };
+
+export default Accordion;

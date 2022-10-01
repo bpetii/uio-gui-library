@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaTrash } from 'react-icons/fa';
-import {Button} from '../components/button/button';
+import {Button} from '../index';
 
 export default {
   title: 'Forms/Button',

@@ -1,6 +1,5 @@
 import React from 'react';
-import {Flex} from '../components/flex/flex';
-import {Button} from '../components/button/button';
+import {Button, Flex} from '../index';
 
 export default {
   title: 'Layout/Flex',

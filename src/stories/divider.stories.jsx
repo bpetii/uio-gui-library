@@ -1,6 +1,5 @@
 import React from 'react';
-import {Divider} from '../components/divider/divider'
-import { Label } from '../components/label/label';
+import { Label, Divider} from '../index';
 
 export default {
   title: 'Layout/Divider',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useArgs } from '@storybook/addons';
-import { Toggle } from '../components/toggle/toggle';
+import { Toggle } from '../index';
 
 export default {
   title: 'Forms/Toggle',

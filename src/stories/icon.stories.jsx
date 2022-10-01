@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-import { Icon } from '../components/icon/icon';
+import { Icon } from '../index';
 import svgIcon from '../components/icon/example-svg.svg';
 
 export default {

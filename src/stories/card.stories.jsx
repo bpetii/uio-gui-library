@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '../components/card/card';
+import { Card } from '../index';
 
 export default {
   title: 'Layout/Card',

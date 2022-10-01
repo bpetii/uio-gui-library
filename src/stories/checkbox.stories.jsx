@@ -1,6 +1,6 @@
 import React from "react";
 import { useArgs } from "@storybook/addons";
-import { CheckBox } from "../components/checkbox/checkbox";
+import { CheckBox } from "../index";
 
 export default {
   title: "Forms/CheckBox",

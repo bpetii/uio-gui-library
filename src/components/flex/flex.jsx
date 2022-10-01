@@ -1,7 +1,7 @@
-import React, { Fragment, isValidElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Flex = ({
+const Flex = ({
 	justifyContent,
   direction,
   wrap,
@@ -46,3 +46,5 @@ Flex.propTypes = {
   gap: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   children: PropTypes.node,
 };
+
+export default Flex;

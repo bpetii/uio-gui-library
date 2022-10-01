@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './toggle.module.css';
 
-export const Toggle = ({
+const Toggle = ({
   name,
   label,
   checked,
@@ -59,3 +59,5 @@ Toggle.propTypes = {
   small: PropTypes.bool,
   checked: PropTypes.bool,
 };
+
+export default Toggle

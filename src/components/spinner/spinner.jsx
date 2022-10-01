@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './spinner.module.css';
 
-export const Spinner = ({ small, colored, tiny }) => {
+const Spinner = ({ small, colored, tiny }) => {
   return (
     <div
       className={cx(
@@ -32,3 +32,5 @@ Spinner.propTypes = {
   small: PropTypes.bool,
   tiny: PropTypes.bool,
 };
+
+export default Spinner;

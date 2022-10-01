@@ -13,7 +13,7 @@ const cssAlignClass = (align) => {
   }
 };
 
-export const Divider = ({  color, align,margin,children }) => (
+const Divider = ({  color, align,margin,children }) => (
   <div
     className={`${styles.divider} ${cssAlignClass(align)}`}
     style={{
@@ -37,3 +37,5 @@ Divider.propTypes = {
     color: PropTypes.string,
     margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
+
+export default Divider;

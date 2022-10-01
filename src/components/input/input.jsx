@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './input.module.css';
 
-export const Input = forwardRef(
+const Input = forwardRef(
   (
     {
       error,
@@ -101,3 +101,5 @@ Input.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   size: PropTypes.number,
 };
+
+export default Input;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Cell, cellShape } from '../cell/cell';
+import { Cell, cellShape } from '../cell/cell.jsx';
 import { isArray } from 'lodash';
 
 const getHeaderAlignment = (alignments, isHeader, rowIndex) => {

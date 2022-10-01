@@ -3,7 +3,7 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './label.module.css';
 
-export const Label = ({
+const Label = ({
   label,
   width,
   labelLeft,
@@ -32,3 +32,5 @@ Label.propTypes = {
   width: PropTypes.string,
   labelLeft: PropTypes.bool,
 };
+
+export default Label;

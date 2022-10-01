@@ -1,6 +1,5 @@
 import React from 'react';
-import { Field } from '../components/field/field';
-import { Input } from '../components/input/input';
+import { Input, Field } from '../index';
 
 export default {
   title: 'Forms/Field',

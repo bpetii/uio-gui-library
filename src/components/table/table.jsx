@@ -3,8 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './table.module.css';
-import { Title } from './title/title';
-import { Row, rowShape } from './row/row';
+import { Title } from './title/title.jsx';
+import { Row, rowShape } from './row/row.jsx';
 
 const getMaxCellCount = (rows) => {
   const count = Math.max(
@@ -23,7 +23,7 @@ const getColumnCount = (rows, headers) => {
   return Math.max(...cellCount);
 };
 
-export const Table = (props) => {
+const Table = (props) => {
   const {
       name,
       rows,
@@ -110,3 +110,5 @@ Table.propTypes = {
     striped: PropTypes.bool,
   }).isRequired,
 };
+
+export default Table;

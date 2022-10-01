@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
 import styles from './icon.module.css';
 
-export const Icon = ({ icon, onClick, clickable, color, size, }) => {
+const Icon = ({ icon, onClick, clickable, color, size, }) => {
   return (
     <div
       className={cx(
@@ -51,3 +51,5 @@ Icon.propTypes = {
     PropTypes.string, //SVG (or deprecated string name)
   ]).isRequired,
 };
+
+export default Icon;

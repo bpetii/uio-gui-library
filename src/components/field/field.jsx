@@ -1,10 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import { Label } from '../label/label';
+import { Label } from '../../index';
 import styles from './field.module.css';
 
-export const Field = ({
+const Field = ({
   label,
   labelLeft,
   labelWidth,
@@ -47,3 +47,5 @@ Field.propTypes = {
   labelWidth: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
+
+export default Field;

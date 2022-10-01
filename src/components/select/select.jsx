@@ -5,7 +5,7 @@ import styles from './select.module.css';
 import { useState } from 'react';
 import { useRef } from 'react';
 
-export const CustomSelect = ({
+const Select = ({
     value,
     onChange,
     options,
@@ -121,10 +121,12 @@ export const CustomSelect = ({
   );
 };
 
-CustomSelect.defaultProps = {
+Select.defaultProps = {
     options: []
 };
 
-CustomSelect.propTypes = {
+Select.propTypes = {
     options: PropTypes.array,
 };
+
+export default Select

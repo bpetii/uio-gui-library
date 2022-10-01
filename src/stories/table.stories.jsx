@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from '../components/table/table';
+import { Table } from '../index';
 import * as storyData from '../components/table/table-data';
 
 export default {

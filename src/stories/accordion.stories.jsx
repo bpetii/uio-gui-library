@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useArgs } from '@storybook/addons';
-import { Accordion, } from '../components/accordion/accordion';
+import { Accordion } from '../index';
 
 export default {
   title: 'Layout/Accordion',

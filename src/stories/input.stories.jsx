@@ -1,6 +1,6 @@
 import React from 'react';
 import { useArgs } from '@storybook/addons';
-import { Input } from '../components/input/input';
+import { Input } from '../index';
 
 export default {
   title: 'Forms/Input',
