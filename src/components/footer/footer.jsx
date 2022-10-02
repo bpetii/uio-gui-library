@@ -7,10 +7,11 @@ import {
   Flex,
   Divider,
 } from '../../index';
+import styles from './footer.module.css'
 
 const Footer = () => {
   return (
-    <div>
+    <div className={styles.footer}>
       <Divider />
       <Flex direction="column" alignItems="center">
         <Spacer height="10px" />
