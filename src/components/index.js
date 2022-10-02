@@ -15,5 +15,8 @@ export {default as Spacer} from './spacer';
 export {default as Spinner} from './spinner';
 export {default as Table} from './table';
 export {default as Toggle} from './toggle';
+export {default as Text} from './text';
+export {default as TextLink} from './text-link';
+export {default as Footer} from './footer';
  
  

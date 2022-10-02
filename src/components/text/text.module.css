@@ -1,0 +1,24 @@
+
+ .bold {
+	 font-weight: bold;
+}
+ .center {
+	 text-align: center;
+}
+ .muted {
+	 color: #7d7b7a;
+}
+ .small {
+	 font-size: 0.9em;
+}
+ .link {
+    text-decoration: none;
+	 color: #3399ff;
+	 cursor: pointer;
+     outline: none;
+}
+ .link:hover {
+	 color: #4da6ff;
+}
+
+ 
