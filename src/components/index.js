@@ -18,5 +18,7 @@ export {default as Toggle} from './toggle';
 export {default as Text} from './text';
 export {default as TextLink} from './text-link';
 export {default as Footer} from './footer';
+export {default as Modal} from './modal';
+export {default as Tooltip} from './tooltip';
  
  

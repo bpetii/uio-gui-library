@@ -1,6 +1,6 @@
 {
   "name": "@bpetii/uio-gui-library",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A react component library",
   "author": "Peter Biro",
   "dependencies": {
@@ -18,9 +18,11 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.4.0",
+    "react-laag": "^2.0.4",
     "react-scripts": "5.0.0",
     "react-select": "^5.4.0",
     "react-svg": "^15.1.9",
+    "resize-observer-polyfill": "^1.5.1",
     "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-postcss": "^4.0.2",
     "web-vitals": "^2.1.4"

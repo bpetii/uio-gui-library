@@ -1,0 +1,34 @@
+ .wrapper {
+	 z-index: 1000;
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 width: 100%;
+	 background: rgba(0,0,0,0.8);
+	 padding: 30px;
+	 overflow-x: hidden;
+	 overflow-y: auto;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+}
+ .contentContainer {
+	 color: white;
+	 max-height: 100%;
+	 flex-grow: 1;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: flex-start !important;
+}
+
+ .contentContainer button:not(:last-child) {
+	 margin-right: 12px;
+}
+
+.contentContainer.centered {
+	justify-content: center !important;
+}
+
+ 
