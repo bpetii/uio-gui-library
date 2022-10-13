@@ -3,9 +3,7 @@ import React from 'react';
 import {
   Modal,
   Button,
-  Card,
-  Input,
-  Field
+  Dialog,
 } from '../index';
 
 export default {
@@ -13,7 +11,16 @@ export default {
   component: Modal,
   args: {
     visible: true,
-    centered: false,
+    centered: true,
+    width: '250px',
+    heading: 'Are you sure?',
+    content: <>This will complete the transaction</>,
+    footer: (
+      <>
+        <Button label="Okay" colored onClick={() => {}} />
+        <Button label="Cancel" onClick={() => {}} />
+      </>
+    ),
     onClose: () => {},
   },
   parameters: {
@@ -24,21 +31,20 @@ export default {
   },
 };
 
-const Template = (args) => {
-  const [{ visible, centered}, updateArgs] = useArgs();
+const Template = () => {
+  const [{ visible, centered, ...dialogProps }, updateArgs] = useArgs();
   const toggleModal = () => {
     updateArgs({ visible: !visible });
   };
   return (
     <>
       <Modal visible={visible} centered={centered}>
-        <Card heading={<div>Heading</div>} sty>
-            <Field label='Enter your name'>
-                <Input />
-            </Field>
-
-            <Button label='Save'/>
-        </Card>
+        <Dialog
+          dialog={{
+            ...dialogProps,
+            onClose: toggleModal,
+          }}
+        />
       </Modal>
       <Button label="Open Modal" onClick={toggleModal} />
     </>
@@ -49,4 +55,20 @@ export const Default = Template.bind({});
 
 export const Centered = Template.bind({});
 Centered.args = { centered: true };
+
+export const Scroll = Template.bind({});
+Scroll.args = {
+  scroll: true,
+  content: (
+    <div>{'Content goes here...'.repeat(100)}</div>
+  ),
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  width: '100%',
+  content: (
+    <div>{'Content goes here...'.repeat(100)}</div>
+  ),
+};
 

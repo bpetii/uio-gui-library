@@ -20,5 +20,6 @@ export {default as TextLink} from './text-link';
 export {default as Footer} from './footer';
 export {default as Modal} from './modal';
 export {default as Tooltip} from './tooltip';
+export {default as Dialog} from './dialog';
  
  
