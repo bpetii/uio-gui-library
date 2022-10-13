@@ -2,7 +2,7 @@ import React, { isValidElement } from 'react';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
 import { useLayer, useHover } from 'react-laag';
-import { TooltipLayer } from './tooltip-layer';
+import { TooltipLayer } from './tooltip-layer.jsx';
 
 const Tooltip = ({
   children,
