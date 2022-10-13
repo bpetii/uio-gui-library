@@ -12,7 +12,7 @@ export default {
   args: {
     visible: true,
     centered: true,
-    width: '250px',
+    width: '251px',
     heading: 'Are you sure?',
     content: <>This will complete the transaction</>,
     footer: (
