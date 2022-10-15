@@ -25,7 +25,7 @@ export default {
   },
   decorators: [
     (story) => (
-      <Flex height="500px">
+      <Flex height="100vh">
         <div
           style={{
             flexGrow: 1,
@@ -62,19 +62,6 @@ Fixed.args = {
 };
 
 Fixed.parameters = {
-  docs: {
-    inlineStories: false,
-    iframeHeight: '400px',
-  },
-};
-
-export const HasFooter = Template.bind({});
-HasFooter.args = {
-  fixed: true,
-  hasFooter: true
-};
-
-HasFooter.parameters = {
   docs: {
     inlineStories: false,
     iframeHeight: '400px',
