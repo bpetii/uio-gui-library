@@ -1,0 +1,82 @@
+
+ .container {
+	 padding: 10px 14px;
+	 border-radius: 4px;
+	 display: inline-flex;
+	 align-items: flex-start;
+	 line-height: 20px;
+	 flex-wrap: wrap;
+	 overflow-y: auto;
+	 scrollbar-width: none;
+	 -ms-overflow-style: none;
+	 border: 1px solid rgba(black, 0.1);
+}
+ .container::-webkit-scrollbar {
+	 width: 0px;
+	 background: transparent;
+}
+ .container.block {
+	 display: flex;
+}
+ .container.info {
+	 color: hsl(201deg 40% 50%);
+	 background-color: hsl(201deg 40% 90%);
+}
+ .container.success {
+	 color: hsl(120deg 40% 50%);
+	 background-color: hsl(120deg 40% 90%);
+}
+ .container.warning {
+	 color: hsl(45deg 76% 33%);
+	 background-color: hsl(45deg 76% 93%);
+}
+ .container.error {
+	 color: hsl(0deg 40% 50%);
+	 background-color: hsl(0deg 40% 90%);
+}
+ .content {
+	 flex: 1;
+	 min-width: 0;
+}
+ .heading {
+	 font-weight: bold;
+	 letter-spacing: 0.1em;
+	 text-transform: uppercase;
+	 font-size: 0.9rem;
+	 line-height: 20px;
+	 margin-bottom: 3px;
+}
+ .icon, .dismiss {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 20px;
+}
+
+ .dismiss {
+	 margin-left: 12px;
+	 color: rgb(0 0 0 / 87%);
+}
+ .dismiss.absolute {
+	 position: absolute;
+	 top: 10px;
+	 right: 14px;
+}
+ .legendToggle, .dismiss {
+	 opacity: 0.4;
+}
+ .legendToggle:hover, .dismiss:hover {
+	 opacity: 0.8;
+	 cursor: pointer;
+}
+ .legendToggle:active, .dismiss:active {
+	 opacity: 1;
+}
+ .legendToggle {
+	 margin-top: 3px;
+}
+ .detailsText {
+	 margin-top: 3px;
+	 word-break: break-word;
+}
+ 

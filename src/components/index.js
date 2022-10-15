@@ -23,5 +23,6 @@ export {default as Tooltip} from './tooltip';
 export {default as Dialog} from './dialog';
 export {default as List} from './list';
 export {default as Drawer} from './drawer';
+export {default as Message} from './message';
  
  
