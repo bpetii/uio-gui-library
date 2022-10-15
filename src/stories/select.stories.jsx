@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select} from '../index';
+import { CustomSelect} from '../index';
 import { useArgs } from '@storybook/addons';
 
 const options = [
@@ -13,7 +13,7 @@ const options = [
 
 export default {
   title: 'Forms/Select',
-  component: Select,
+  component: CustomSelect,
   args: {
     options: options
   },
@@ -27,12 +27,12 @@ const SelectTemplate = (args) => {
       };
 
   return (
-    <Select
+    <CustomSelect
       {...args}
       value={value}
       onChange={o => handleChange(o)}
     >
-    </Select>
+    </CustomSelect>
   );
 };
 
