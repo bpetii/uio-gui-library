@@ -9,7 +9,9 @@ const Select = ({
     value,
     onChange,
     options,
-    multiple
+    multiple,
+    small,
+    width
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [highlitedIndex, setHighlitedIndex] = useState(0);
@@ -80,7 +82,11 @@ const Select = ({
         onBlur={() => setIsOpen(false)}
         onClick={() => setIsOpen(prev => !prev)} 
         tabIndex={0} 
-        className={styles.container} 
+        className={cx(
+          styles.container,
+          small ? styles.small : '',
+        )}
+        style={{width: width}}
     >
         <span data-placeholder="Select..." className={styles.value}>
           {
@@ -122,11 +128,21 @@ const Select = ({
 };
 
 Select.defaultProps = {
-    options: []
+    options: [],
+    value: null,
+    onChange: () => {},
+    multiple: false,
+    small: false,
+    width :'25em'
 };
 
 Select.propTypes = {
     options: PropTypes.array,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+    onChange: PropTypes.func,
+    multiple: PropTypes.bool,
+    small: PropTypes.bool,
+    width: PropTypes.string
 };
 
 export default Select

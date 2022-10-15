@@ -44,6 +44,12 @@ Selected.args = {value: options[0]}
 export const Multiple = SelectTemplate.bind({});
 Multiple.args = {value: [options[0], options[1]], multiple: true}
 
+export const Small = SelectTemplate.bind({});
+Small.args = {value: options[0], small: true}
+
+export const Width = SelectTemplate.bind({});
+Width.args = {value: options[0], width: '50px'}
+
 
 export const Empty = SelectTemplate.bind({});
 Empty.args = {options: [], value: null}
