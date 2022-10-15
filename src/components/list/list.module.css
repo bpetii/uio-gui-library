@@ -1,0 +1,59 @@
+ .name {
+	 padding: 12px 20px;
+	 display: flex;
+	 align-items: flex-start;
+     font-weight: 700;
+}
+ .list {
+	 flex-shrink: 0;
+	 background: #f5f7f9;
+}
+ .list.bordered:first-child, .list.bordered:first-child > :first-child {
+	 border-top-left-radius: inherit;
+	 border-top-right-radius: inherit;
+}
+ .list.bordered:last-child, .list.bordered:last-child > :last-child {
+	 border-bottom-left-radius: inherit;
+	 border-bottom-right-radius: inherit;
+	 border-bottom: 0;
+}
+ .item {
+	 color: inherit;
+	 display: block;
+	 transition: background-color 0.2s;
+	 position: relative;
+	 border-bottom: 1px solid #ddd;
+	 background-color: white;
+	 transition: background 0.3s;
+	 overflow-wrap: break-word;
+	 hyphens: auto;
+}
+ .item:not(.heading):after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 bottom: 0;
+	 width: 5px;
+	 border-top-left-radius: inherit;
+	 border-bottom-left-radius: inherit;
+	 transition: background 0.3s;
+}
+ .item.action {
+	 cursor: pointer;
+}
+ .item.action:not(.active):hover {
+	 background: #f5f7f9;
+}
+ .item.action:not(.active):hover:after {
+	 background: #000000;
+}
+ .item.active {
+	 cursor: default;
+	 position: relative;
+	 z-index: 1;
+	 background: #fff0e4;
+}
+ .item.active:after {
+	 background: #3399ff !important;
+}

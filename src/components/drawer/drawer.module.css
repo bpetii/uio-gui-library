@@ -1,0 +1,73 @@
+
+ .inline {
+	 position: relative;
+}
+ .inline.left {
+	 order: -1;
+}
+ .inline.right {
+	 order: 9999;
+}
+ .fixed {
+	 position: fixed;
+	 top: 0;
+	 bottom: 0;
+	 z-index: 99;
+}
+ .fixed.left {
+	 left: 0;
+}
+ .fixed.right {
+	 right: 0;
+}
+ .left .border {
+	 border-right: 1px solid #ddd;
+}
+ .right .border {
+	 border-left: 1px solid #ddd;
+}
+ .shadow {
+	 box-shadow: 0 0 3px rgba(0,0,0,0.15);
+}
+ .drawerContent {
+	 overflow-x: hidden;
+	 overflow-y: auto;
+	 max-height: 100%;
+	 min-height: 100%;
+	 transition: width 0.2s;
+	 scrollbar-width: none;
+	 -ms-overflow-style: none;
+     background-color: white;
+}
+ @media print {
+	 .drawerContent {
+		 background: transparent !important;
+	}
+}
+ .drawerContent::-webkit-scrollbar {
+	 display: none;
+}
+ .toggleButton {
+	 transition: transform 0.4s;
+	 display: inline-block;
+	 transform: rotate(180deg);
+	 position: absolute;
+	 z-index: 1;
+}
+ .left .toggleButton {
+	 right: -19px;
+}
+ .right .toggleButton {
+	 left: -19px;
+}
+ .toggleButton.top {
+	 top: 20px;
+}
+ .toggleButton.bottom {
+	 bottom: 20px;
+}
+ .toggleButton.toggleButtonOpen {
+	 transform: rotate(0deg);
+}
+
+ 
