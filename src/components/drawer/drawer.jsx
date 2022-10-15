@@ -16,6 +16,7 @@ const Drawer = ({
   closedWidth,
   button,
   buttonPosition,
+  hasFooter,
   border,
 }) => {
   const [open, setOpen] = useState(openProp)
@@ -28,6 +29,7 @@ const Drawer = ({
         shadow ? styles.shadow : '',
         fixed ? styles.fixed : styles.inline,
         right ? styles.right : styles.left,
+        hasFooter? styles.hasFooter : ''
       )}
       style={{
         top,

@@ -60,7 +60,21 @@ export const Fixed = Template.bind({});
 Fixed.args = {
   fixed: true,
 };
+
 Fixed.parameters = {
+  docs: {
+    inlineStories: false,
+    iframeHeight: '400px',
+  },
+};
+
+export const HasFooter = Template.bind({});
+HasFooter.args = {
+  fixed: true,
+  hasFooter: true
+};
+
+HasFooter.parameters = {
   docs: {
     inlineStories: false,
     iframeHeight: '400px',

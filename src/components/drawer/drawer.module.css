@@ -9,11 +9,16 @@
 	 order: 9999;
 }
  .fixed {
-	 position: fixed;
+	 position: absolute;
 	 top: 0;
 	 bottom: 0;
 	 z-index: 99;
 }
+
+.fixed.hasFooter{
+    bottom: 75px
+}
+
  .fixed.left {
 	 left: 0;
 }
