@@ -4,18 +4,16 @@ import {
   Spacer,
   TextLink,
   Text,
-  Flex,
-  Divider,
+  Flex
 } from '../../index';
 import styles from './footer.module.css'
 
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <Divider />
       <Flex direction="column" alignItems="center">
-        <Spacer height="10px" />
-        <Text muted>
+        <Spacer height="15px" />
+        <Text>
           &copy; {new Date().getFullYear()} Mohammedreza Dianat and Péter Bíró
         </Text>
         <Spacer height="10px" />
@@ -24,7 +22,7 @@ const Footer = () => {
             <Flex alignItems="center">
               <RiGitlabFill />
               <Spacer width="5px" />
-              GitLab
+              GitHub
             </Flex>
           </TextLink>
           <Spacer width="15px" />
