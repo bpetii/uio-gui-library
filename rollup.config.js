@@ -24,7 +24,7 @@ const rollupConfig = [
         ],
         external: [/@babel\runtime/, 'react'],
         plugins: [
-            babel({babelHelpers: 'runtime', plugins:['@babel/plugin-transform-runtime']}),
+            babel({babelHelpers: 'runtime', plugins:['@babel/plugin-transform-runtime'], compact: true}),
             resolve(),
             commonjs(),
             requireContext(),
