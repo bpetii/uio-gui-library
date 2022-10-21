@@ -6,7 +6,6 @@ export const items = [
   {
     id: 2,
     name: 'Kangaroo',
-    active: true,
   },
   {
     id: 3,

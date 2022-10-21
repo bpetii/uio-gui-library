@@ -1,16 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
-import { Label } from '../../index';
 import styles from './list.module.css';
 
 export const ListRow = ({ items }) => {
-  console.log(items);
     const listElement = (index, item,  hasOnClick) => {
-      const onClick = (evt) => {
-        evt.preventDefault();
-        evt.stopPropagation();
-      };
-  
       return (
         <a
           href={item.url}
@@ -29,7 +22,7 @@ export const ListRow = ({ items }) => {
           data-id={index}
           title={item.title}
         >
-            <div className={styles.name} onClick={onClick}>
+            <div className={styles.name}>
               {item.name}
             </div>
         </a>
