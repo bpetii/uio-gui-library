@@ -24,6 +24,6 @@ export {default as Dialog} from './dialog';
 export {default as List} from './list';
 export {default as Drawer} from './drawer';
 export {default as Message} from './message';
-export {default as MyToast} from './my-toast';
+export {default as TopBar} from './top-bar';
  
  

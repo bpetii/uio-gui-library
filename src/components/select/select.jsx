@@ -23,7 +23,6 @@ const Select = ({
 
     useEffect(()=> {
       const handler = (e) => {
-        console.log(e.code);
         if (e.target !== containerRef.current) return;
         switch(e.code) {
           case 'Enter':
@@ -44,7 +43,10 @@ const Select = ({
             }
             break;
           }
-          default: {}
+          default: {
+            console.log({...e.target})
+            console.log(value);
+          }
         }
       }
         containerRef.current?.addEventListener("keydown", handler);
@@ -81,7 +83,8 @@ const Select = ({
         ref = {containerRef}
         onBlur={() => setIsOpen(false)}
         onClick={() => setIsOpen(prev => !prev)} 
-        tabIndex={0} 
+        tabIndex={0}
+        value={value}
         className={cx(
           styles.container,
           small ? styles.small : '',
