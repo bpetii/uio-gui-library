@@ -138,7 +138,7 @@ Select.defaultProps = {
 
 Select.propTypes = {
     options: PropTypes.array,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+    value: PropTypes.oneOfType(PropTypes.object, PropTypes.array),
     onChange: PropTypes.func,
     multiple: PropTypes.bool,
     small: PropTypes.bool,
