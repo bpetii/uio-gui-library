@@ -1,6 +1,6 @@
-import { useArgs } from '@storybook/addons';
 import React from 'react';
 import { Menu, Button } from '../index';
+import { FaUser } from 'react-icons/fa';
 
 const sections= [
     {
@@ -55,7 +55,7 @@ export const CustomTrigger = Template.bind({});
 CustomTrigger.args = {
     menu: {
       sections,
-      component: <Button label="User"/>,
+      component: (<Button label={<FaUser />} round />)
     },
   };
   
