@@ -55,7 +55,7 @@ export const CustomTrigger = Template.bind({});
 CustomTrigger.args = {
     menu: {
       sections,
-      component: ( <Button label="User"/> ),
+      component: <Button label="User"/>,
     },
   };
   

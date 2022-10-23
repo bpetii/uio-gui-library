@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import {Button} from '../../index';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 import styles from './menu.module.css'
 
 const Menu = ({menu}) => {
     const [open, setOpen] = useState(false);
-    const {compontent, sections} = menu || {};
-
+  
     return(
-        <div className={styles.dropdown}>
-            {compontent || <Button label="Select" onClick={() => setOpen(prev => !prev)}/>}
+        <div className={styles.dropdown} onClick={() => setOpen(prev => !prev)}>
+            {menu.component|| <Button label="Select" />}
             <div className={cx(styles.menu, (open && styles.open))}>
               <div className={styles.menuContent}>
-              {sections.map(section => {
+              {menu.sections.map(section => {
                   switch(section.type) {
                     case "Option":  return(
                       <option className={cx(styles.item, section.selected && styles.selected)} onClick={(e) => {section.onClick(e); setOpen(false)}}>{section.label}</option>
@@ -27,5 +27,22 @@ const Menu = ({menu}) => {
         </div>
     )
 }
+
+
+Menu.defaultProps = {
+  menu: {},
+};
+
+Menu.propTypes = {
+  menu: PropTypes.shape({
+    sections: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string,
+      selected: PropTypes.bool,
+      onClick: PropTypes.func,
+      type: PropTypes.string,
+    })),
+    component: PropTypes.elementType,
+  }),
+};
 
 export default Menu;
