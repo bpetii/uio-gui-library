@@ -6,7 +6,6 @@ import styles from './menu.module.css'
 
 const Menu = ({menu}) => {
     const [open, setOpen] = useState(false);
-  
     return(
         <div className={styles.dropdown} onClick={() => setOpen(prev => !prev)}>
             {menu.component|| <Button label="Select" />}
@@ -15,10 +14,28 @@ const Menu = ({menu}) => {
               {menu.sections.map(section => {
                   switch(section.type) {
                     case "Option":  return(
-                      <option className={cx(styles.item, section.selected && styles.selected)} onClick={(e) => {section.onClick(e); setOpen(false)}}>{section.label}</option>
+                      <div 
+                        className={cx(styles.item, section.selected && styles.selected)} 
+                        onClick={(e) => {
+                        e.stopPropagation()
+                        section.onClick(e); 
+                        setOpen(false);
+                      }}
+                      >
+                        {section.label}
+                      </div>
                       )
                     default: return(
-                      <option className={cx(styles.item, section.selected && styles.selected)} onClick={(e) => {section.onClick(e); setOpen(false)}}>{section.label}</option>
+                      <div 
+                      className={cx(styles.item, section.selected && styles.selected)} 
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        section.onClick(e); 
+                        setOpen(false);
+                      }}
+                      >
+                        {section.label}
+                      </div>
                       )
                   }
                 })}    
