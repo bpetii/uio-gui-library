@@ -21,6 +21,11 @@
     max-width: 30em;
 }
 
+.menu.left {
+    right: 0;
+    left: initial
+}
+
 .dropdown > .menu.open{
     pointer-events: auto;
     opacity: 1;

@@ -58,6 +58,17 @@ CustomTrigger.args = {
       component: (<Button label={<FaUser />} round />)
     },
   };
+
+export const Left = Template.bind({});
+Left.decorators=[
+  (story) => <div style={{marginLeft: '50px'}}>{story()}</div>
+]
+Left.args = {
+      menu: {
+        sections,
+        left: true
+      },
+    };
   
 
 

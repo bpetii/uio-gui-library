@@ -6,10 +6,18 @@ import styles from './menu.module.css'
 
 const Menu = ({menu}) => {
     const [open, setOpen] = useState(false);
+    let customuedTrigger = null;
+    if (menu.component) {
+      customuedTrigger =  React.cloneElement(
+        menu.component,
+        {onClick: () => setOpen(prev => !prev)}
+      )
+    }
+  
     return(
-        <div className={styles.dropdown} onClick={() => setOpen(prev => !prev)}>
-            {menu.component|| <Button label="Select" />}
-            <div className={cx(styles.menu, (open && styles.open))}>
+        <div className={styles.dropdown}>
+            {customuedTrigger || <Button label="Select" onClick={() => setOpen(prev => !prev)}/>}
+            <div className={cx(styles.menu, (open && styles.open), (menu.left && styles.left))}>
               <div className={styles.menuContent}>
               {menu.sections.map(section => {
                   switch(section.type) {
@@ -48,6 +56,7 @@ const Menu = ({menu}) => {
 
 Menu.defaultProps = {
   menu: {},
+  left: false
 };
 
 Menu.propTypes = {
@@ -59,6 +68,7 @@ Menu.propTypes = {
       type: PropTypes.string,
     })),
     component: PropTypes.elementType,
+    left: PropTypes.bool
   }),
 };
 

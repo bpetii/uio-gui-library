@@ -81,6 +81,7 @@
     "rollup": "^2.79.1",
     "rollup-plugin-require-context": "^1.0.1",
     "storybook-css-modules": "^1.0.8",
+    "storybook-dark-mode": "^1.1.2",
     "webpack": "^5.71.0"
   },
   "main": "dist/cjs/index.js",
