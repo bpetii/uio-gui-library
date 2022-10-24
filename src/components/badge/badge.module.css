@@ -4,7 +4,7 @@
 	 position: relative;
 }
  .badge {
-	 background: #3399ff;
+	 background: var(--color-background-primary);
 	 display: inline-block;
 	 position: static;
 }
@@ -20,11 +20,8 @@
 	 font-weight: bold;
 	 letter-spacing: normal;
 }
- .badge.label.dark {
-	 color: #fff;
-}
- .badge.label.light {
-	 color: rgba(0,0,0,0.6);
+ .badge.label {
+	 color: var(--color-text);
 }
  .badge.small {
 	 line-height: 13px;

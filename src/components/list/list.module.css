@@ -6,7 +6,7 @@
 }
  .list {
 	 flex-shrink: 0;
-	 background: #f5f7f9;
+	 background: var(--color-background-raised);
 }
  .list.bordered:first-child, .list.bordered:first-child > :first-child {
 	 border-top-left-radius: inherit;
@@ -22,8 +22,8 @@
 	 display: block;
 	 transition: background-color 0.2s;
 	 position: relative;
-	 border-bottom: 1px solid #ddd;
-	 background-color: white;
+	 border-bottom: 1px solid var(--color-border);
+	 background: var(--color-background-raisd);
 	 transition: background 0.3s;
 	 overflow-wrap: break-word;
 	 hyphens: auto;
@@ -43,16 +43,16 @@
 	 cursor: pointer;
 }
  .item.action:not(.active):hover {
-	 background: #f5f7f9;
+	 background: var(--color-listitem-hover);
 }
  .item.action:not(.active):hover:after {
-	 background: #000000;
+	 background: var(--color-text-muted);
 }
  .item.active {
 	 cursor: default;
 	 position: relative;
 	 z-index: 1;
-	 background: #fff0e4;
+	 background: var(--color-listitem-active);
 }
  .item.active:after {
 	 background: #3399ff !important;

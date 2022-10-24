@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip } from '../index';
+import { Tooltip, Text } from '../index';
 
 export default {
   title: 'Basic/Tooltip',
@@ -11,7 +11,7 @@ export default {
     enabled: true,
     placement: undefined,
     triggerOffset: undefined,
-    children: <span>Hover over me</span>,
+    children: <Text>Hover over me</Text>,
   },
 };
 

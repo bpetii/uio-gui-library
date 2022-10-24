@@ -1,8 +1,8 @@
  .tooltip {
-	 background: rgb(0 0 0 / 87%);
+	 background: var(--color-background-tooltip);
 	 fill: rgb(0 0 0 / 87%);
 	 z-index: 1500;
-	 color: #f5f7f9;
+	 color: var(--color-text);
      padding: 4px 8px;
 	 border-radius: 3px;
 }
@@ -10,7 +10,7 @@
 	 color: #f5f7f9;
 }
  .tooltip > svg, .tooltip > svg > * {
-	 fill: inherit !important;
+	 fill: var(--color-background-tooltip) !important;
 }
  .tooltip.error {
 	 background: hsl(0deg 71% 53%);

@@ -15,7 +15,6 @@ html {
 
 .table {
     width: 100%;
-    background: white;
     box-shadow: none;
     text-align: left;
     color: var(--color-text);
@@ -111,6 +110,11 @@ tr:first-child td {
     align-items: center;
     justify-content: space-between;
 }
+
+tbody tr {
+    background-color: var(--color-background-raised);
+}
+
 .striped tbody tr:nth-child(even) {
     background-color: var(--color-background-table-row-tinted);
 }

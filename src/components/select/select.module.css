@@ -8,10 +8,11 @@
     padding: .5em;
     border-radius: 0.25em;
     gap: .5em;
+    color: var(--color-text);
 }
 
 span:empty::before {
-    color: #acabab;
+    color: var(--color-input-placeholder);
     content: attr(data-placeholder);
 }
 
@@ -23,7 +24,7 @@ span:empty::before {
 }
 
 .container:focus {
-    border-color: #3399ff;
+    border-color: var(--color-background-primary);
 }
 
 .value {
@@ -56,6 +57,7 @@ span:empty::before {
     cursor: pointer;
     background: none;
     outline: none;
+    color: var(--color-text);
 }
 
 
@@ -99,7 +101,7 @@ span:empty::before {
     width: 100%;
     left:0;
     top: calc(100% + 0.25em);
-    background-color: white;
+    background-color: var(--color-background-raised);
     cursor: pointer;
     z-index: 10;
     display: none; 
@@ -120,13 +122,13 @@ span:empty::before {
 }
 
 .option.selected {
-    background-color: #26619c;
-    color: white;
+    background-color:var(--color-listitem-active);;
+    color: var(--color-text);
 }
 
 .option.selected:hover,
 .option.highlighted:hover,
 .option.highlighted  {
-    background-color: #89cff0;
-    color: white;
+    background-color: var(--color-listitem-hover);
+    color: var(--color-text);
 }

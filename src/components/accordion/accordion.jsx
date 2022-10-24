@@ -4,32 +4,6 @@ import cx from 'classnames';
 import { Chevron } from './chevron/chevron.jsx';
 import styles from './accordion.module.css';
 
-const AccordionManaged = ({
-  heading,
-  bordered,
-  padding,
-  expanded: initialExpanded,
-  children,
-}) => {
-  const [expanded, toggle] = React.useState(initialExpanded);
-
-  return (
-    <>
-      <Accordion
-        heading={heading}
-        bordered={bordered}
-        padding={padding}
-        expanded={expanded}
-        onClick={() => {
-          toggle(!expanded);
-        }}
-      >
-        {children}
-      </Accordion>
-    </>
-  );
-};
-
 const AccordionBase = ({
   heading,
   expanded,
@@ -80,21 +54,8 @@ const Accordion = ({
   children,
   onClick,
   squareBottom,
-  testId,
 }) =>
-  managed ? (
-    <AccordionManaged
-      heading={heading}
-      expanded={expanded}
-      bordered={bordered}
-      padding={padding}
-      squareBottom={squareBottom}
-      onClick={onClick}
-      testId={testId}
-    >
-      {children}
-    </AccordionManaged>
-  ) : (
+ (
     <AccordionBase
       heading={heading}
       expanded={expanded}
@@ -102,7 +63,6 @@ const Accordion = ({
       padding={padding}
       squareBottom={squareBottom}
       onClick={onClick}
-      testId={testId}
     >
       {children}
     </AccordionBase>

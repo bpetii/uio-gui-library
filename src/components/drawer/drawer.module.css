@@ -22,10 +22,10 @@
 	 right: 0;
 }
  .left .border {
-	 border-right: 1px solid #ddd;
+	 border-right: 1px solid var(--color-border);
 }
  .right .border {
-	 border-left: 1px solid #ddd;
+	 border-left: 1px solid var(--color-border);
 }
  .shadow {
 	 box-shadow: 0 0 3px rgba(0,0,0,0.15);
@@ -38,7 +38,7 @@
 	 transition: width 0.2s;
 	 scrollbar-width: none;
 	 -ms-overflow-style: none;
-     background-color: white;
+     background-color: var(--color-background);
 }
  @media print {
 	 .drawerContent {

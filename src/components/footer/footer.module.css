@@ -4,7 +4,7 @@
     left:0;
     right: 0;
     height: 75px;
-    background-color: #004a8a;
-    padding: 10px 15px;
+    background-color: var(--color-background-footer);
+    padding: auto;
     color: white;
 }

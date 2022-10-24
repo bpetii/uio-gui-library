@@ -1,6 +1,6 @@
 .wrapper {
-    color: inherit;
-    fill: inherit;
+    color: var(--color-text);
+    color: var(--color-text);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -17,10 +17,10 @@
     cursor: pointer;
 }
 .clickable:hover {
-    color: #3399ff !important;
-    fill: #3399ff !important;
+    color: var(--color-primary-hover) !important;
+    fill:  var(--color-primary-hover) !important;
 }
 .clickable:active {
-    color: #3399ff!important;
-    fill: #3399ff !important;
+    color: var(--color-primary-hover) !important;
+    fill: var(--color-primary-hover)!important;
 }

@@ -15,7 +15,6 @@ export default {
         primary: 'primary',
         success: 'success',
         danger: 'danger',
-        muted: 'muted',
       },
     },
     icon: {
@@ -28,9 +27,6 @@ export default {
   },
   args: {
     label: 'Label',
-    colored: false,
-    disabled: false,
-    basic: false,
   },
 };
 
@@ -42,14 +38,11 @@ const Template = (args) => (
 
 export const Default = Template.bind({});
 
-export const Small = Template.bind({});
-Small.args = { small: true };
-
 export const Basic = Template.bind({});
 Basic.args = { basic: true };
 
-export const Active = Template.bind({});
-Basic.args = { active: true };
+export const Small = Template.bind({});
+Small.args = { small: true};
 
 export const Round = Template.bind({});
 Round.args = { round: true, label: <FaTrash /> };

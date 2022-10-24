@@ -27,8 +27,6 @@ const Button = ({
         case 'success':
         case 'green':
           return buttonStyles.green;
-        case 'muted':
-          return buttonStyles.muted;
         default:
           return buttonStyles.blue;
       }
@@ -46,7 +44,6 @@ const Button = ({
         basic ? buttonStyles.basic : '',
         small ? buttonStyles.small : '',
         active ? buttonStyles.active : '',
-        basic ? buttonStyles.basic : '',
         color,
         pill ? buttonStyles.pill : '',
         round ? buttonStyles.round : '',

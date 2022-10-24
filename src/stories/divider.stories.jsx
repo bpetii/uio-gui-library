@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label, Divider} from '../index';
+import { Label, Divider, Text} from '../index';
 
 export default {
   title: 'Layout/Divider',
@@ -12,7 +12,7 @@ export default {
       options: ['left', 'center', 'right'],
     },
   },
-  decorators: [(story) => <>content{story()}more content</>],
+  decorators: [(story) => <Text>content{story()}more content</Text>],
   parameters: {
     docs: {
       source: {
@@ -44,7 +44,7 @@ Margin.args = {
 
 export const CustomColor = Template.bind({});
 CustomColor.args = {
-  color: '#DDDDDD',
-  children: <Label >Colored text</Label>,
+  color: 'red',
+  children: <span style={{color:'red'}}>Colored text</span>,
   align: 'left',
 };

@@ -1,0 +1,8 @@
+
+@import "./theme.default.css";
+@import "./theme.dark.css";
+
+
+:root{
+    --size-checkbox:20px
+}

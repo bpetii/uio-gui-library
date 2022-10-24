@@ -11,7 +11,6 @@ const Badge = ({ children, color, title, dot, margin, small }) => {
         <sup
           className={cx(
             styles.badge,
-            styles.light,
             title !== null ? styles.label : styles.dot,
             small ? styles.small : '',
             children ? styles.hasChildren : '',

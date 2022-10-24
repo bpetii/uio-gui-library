@@ -2,7 +2,7 @@
     margin-right: 10px;
     font-size: 11px;
     transition: transform 0.3s;
-    color: #7d7b7a;
+    color: var(--color-text);
 }
 .chevron.expanded {
     transform: rotate(90deg);

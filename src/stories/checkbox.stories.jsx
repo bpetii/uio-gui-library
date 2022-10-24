@@ -6,7 +6,6 @@ export default {
   title: "Forms/CheckBox",
   component: CheckBox,
   args: {
-    disabled: false,
     label: "Label",
   },
 };
@@ -21,10 +20,11 @@ const Template = (args) => {
 export const Default = Template.bind({});
 
 export const Disabled = Template.bind({});
-Disabled.args = { disabled: true };
+Disabled.args = { disabled: true};
 
 export const DisabledChecked = Template.bind({});
 DisabledChecked.args = { disabled: true, checked: true };
 
 export const WithoutLabel = Template.bind({});
 WithoutLabel.args = { label: "" };
+

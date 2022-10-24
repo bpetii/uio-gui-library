@@ -1,9 +1,3 @@
-:root {
-  --size-checkbox: 20px;
-  /* TODO: Move to top level so other components can share them */
-  --color-disabled: #acabab;
-  --color-primary: #3399ff;
-}
 
 .checkbox {
   position: relative;
@@ -28,6 +22,7 @@
   cursor: pointer;
   user-select: none;
   display: flex;
+  color: var(--color-text);
   gap: 8px;
   align-items: center;
 }
@@ -40,15 +35,15 @@
   padding: 2px;
   border-radius: 0.214286rem;
   transition: all 0.1s ease;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   color: transparent;
 }
 .checkbox label:hover .checkmark {
-  border-color: #bbb;
+  border-color: var(--color-border);
 }
 .checkbox input:checked ~ label .checkmark {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+  background: var(--color-background-primary);
+  border-color: var(--color-background-primary);
   color: white;
 }
 .checkbox.disabled {
@@ -56,9 +51,9 @@
   pointer-events: none;
 }
 .checkbox.disabled label {
-  color: var(--color-disabled);
+  color: var(--color-text-disabled);
 }
 .checkbox.disabled .checkmark {
-  background: var(--color-disabled) !important;
-  border-color: var(--color-disabled) !important;
+  background: var(--color-text-disabled) !important;
+  border-color: var(--color-background-muted) !important;
 }

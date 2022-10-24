@@ -15,6 +15,7 @@ const Text = ({
   return (
     <span
       className={cx(
+        styles.text,
         bold && styles.bold,
         center && styles.center,
         link && styles.link,

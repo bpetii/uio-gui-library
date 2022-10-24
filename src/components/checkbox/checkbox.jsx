@@ -15,7 +15,7 @@ const CheckBox = ({
 }) => {
   return (
     <div
-      className={cx(styles.checkbox, disabled ? styles.disabled : null)}
+      className={cx(styles.checkbox, disabled && styles.disabled)}
       onClick={(evt) => {
         onChange(evt);
       }}

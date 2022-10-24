@@ -19,7 +19,7 @@ const Divider = ({  color, align,margin,children }) => (
     style={{
       marginTop: margin,
       marginBottom: margin,
-      color: color,
+      '--color': color,
     }}
   >
     {children}
@@ -28,7 +28,7 @@ const Divider = ({  color, align,margin,children }) => (
 
 Divider.defaultProps = {
     align: 'center',
-    color: '#ddd',
+    color: 'var(--color-text-muted)',
     margin: 20,
 };
 

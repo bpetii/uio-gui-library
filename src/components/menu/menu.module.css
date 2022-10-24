@@ -7,7 +7,7 @@
     position: absolute;
     left: 0;
     top: calc(100% + 0.25rem);
-    background-color: white;
+    background-color: var(--color-background-raised);
     border-radius: 0.25rem;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
     opacity: 0;
@@ -33,6 +33,7 @@
 }
 
 .item {
+    color: var(--color-text);
     max-width: 100%;
     line-height: 30px;
     display: flex;
@@ -46,11 +47,11 @@
 }
 
 .item:hover{
-    background-color: #F4F7F9;
+    background-color: var(--color-listitem-hover);
     cursor: pointer;
 }
 
 .item.selected{
-    background-color: #EDF1F4;
+    background-color: var(--color-listitem-active);
     cursor: pointer;
 }
