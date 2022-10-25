@@ -26,5 +26,6 @@ export {default as Drawer} from './drawer';
 export {default as Message} from './message';
 export {default as TopBar} from './top-bar';
 export {default as Menu} from './menu';
+export {default as SideBar} from './sidebar'
  
  

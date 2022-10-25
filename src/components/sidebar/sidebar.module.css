@@ -1,0 +1,95 @@
+
+ .sidebar {
+	 background-color: #111315;
+	 color: white;
+	 position: relative;
+}
+ @media print {
+	 .sidebar {
+		 display: none;
+	}
+}
+ .inner {
+	 padding: 1.4rem;
+	 scrollbar-width: none;
+	 -ms-overflow-style: none;
+}
+ .inner::-webkit-scrollbar {
+	 width: 0px;
+	 background: transparent;
+}
+ .title, .subtitle, .label {
+	 transition: opacity 0.2s, max-height 0.2s, margin 0.2s, color 0.2s;
+	 max-height: 50px;
+}
+ .title {
+	 overflow: hidden;
+	 max-width: 100%;
+	 text-overflow: ellipsis;
+	 white-space: nowrap;
+	 margin-top: 0;
+	 font-size: 16px;
+}
+ .subtitle {
+	 margin-bottom: 0.75rem;
+	 white-space: nowrap;
+	 font-size: 12px;
+	 letter-spacing: 0.1em;
+	 opacity: 0.6;
+}
+ .list {
+	 margin-left: -1.4rem;
+	 margin-right: -1.4rem;
+	 margin-bottom: 2rem;
+	 margin-top: 0;
+}
+ .item {
+	 font-size: 16px;
+	 color: white;
+	 font-weight: normal;
+	 display: flex;
+     text-decoration: none;
+	 padding: 0.4rem 1.4rem;
+	 align-items: center;
+}
+ .item:focus {
+	 outline: none;
+}
+ .item::-moz-focus-inner {
+	 border: 0;
+}
+ .item:hover {
+    color: var(--color-background-primary);
+}
+ .item.active {
+	 color: white;
+	 background: black;
+}
+ .icon {
+	 margin-right: 10px;
+	 line-height: 0;
+	 flex-shrink: 0;
+	 transition: opacity 0.4s;
+	 opacity: 0.4;
+	 display: block;
+}
+ .item:hover .icon, .item:focus .icon {
+	 opacity: 0.6;
+}
+ .item:active .icon {
+	 opacity: 0.8;
+}
+ .item.active .icon {
+	 opacity: 1;
+}
+ .icon > * {
+	 opacity: 1;
+}
+ .icon > span {
+	 display: block;
+}
+ .label {
+	 white-space: nowrap;
+	 overflow: hidden;
+}
+ 

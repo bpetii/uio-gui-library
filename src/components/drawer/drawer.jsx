@@ -15,6 +15,7 @@ const Drawer = ({
   width,
   closedWidth,
   button,
+  background,
   buttonPosition,
   hasFooter,
   border,
@@ -36,7 +37,7 @@ const Drawer = ({
     >
       <div
         className={cx(styles.drawerContent, border && styles.border)}
-        style={{ width: currentWidth }}
+        style={{background, width: currentWidth }}
       >
         <div style={{ width: width }}>{children}</div>
       </div>
