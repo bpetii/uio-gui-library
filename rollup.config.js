@@ -2,8 +2,11 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import {babel} from '@rollup/plugin-babel';
 import autoprefixer from 'autoprefixer';
+import simpleVars from 'postcss-simple-vars';
 import requireContext from 'rollup-plugin-require-context';
 import postcss from 'rollup-plugin-postcss'
+import styles from 'rollup-plugin-styles';
+import embedCSS from 'rollup-plugin-embed-css';
 
 const packageJson = require("./package.json");
 
@@ -12,14 +15,9 @@ const rollupConfig = [
         input: 'src/index.js',
         output: [
             {
-                file: packageJson.main,
-                format: 'cjs',
-                sourcemap:true,
-            },
-            {
                 file: packageJson.module,
                 format: 'esm',
-                sourcemap:true,
+                assetFileNames: 'assets/[name].[ext]',
             }
         ],
         external: [/@babel\runtime/, 'react'],
@@ -28,9 +26,12 @@ const rollupConfig = [
             resolve(),
             commonjs(),
             requireContext(),
-            postcss({
-                modules: true,
-              })
+            styles({
+                plugins: [autoprefixer()],
+                autoModules: true,
+                mode: ['extract', 'global.css'],
+              }),
+
         ]
     }
 ]
