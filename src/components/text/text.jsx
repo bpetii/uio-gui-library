@@ -11,6 +11,7 @@ const Text = ({
   muted,
   onClick,
   small,
+  color
 }) => {
   return (
     <span
@@ -23,6 +24,7 @@ const Text = ({
         onClick && styles.clickable,
         small && styles.small,
       )}
+      style={{color: color}}
       onClick={onClick}
     >
       {children}

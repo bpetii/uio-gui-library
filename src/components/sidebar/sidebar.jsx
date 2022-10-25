@@ -3,7 +3,7 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import isEqual from 'react-fast-compare';
 import { FaArrowLeft } from 'react-icons/fa';
-import { Sections } from './sections';
+import { Sections } from './sections.jsx';
 import styles from './sidebar.module.css';
 import { Button, Drawer } from '../../index';
 
