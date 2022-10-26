@@ -13,7 +13,7 @@ const Footer = () => {
     <div className={styles.footer}>
       <Flex direction="column" alignItems="center">
         <Spacer height="15px" />
-        <Text >
+        <Text color='var(--color-footer-text-color)'>
           &copy; {new Date().getFullYear()} Mohammedreza Dianat and Péter Bíró
         </Text>
         <Spacer height="10px" />
