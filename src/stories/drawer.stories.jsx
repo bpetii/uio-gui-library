@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   FaChevronLeft,
 } from 'react-icons/fa';
-import { Drawer, Button, List, Flex } from '../index';
+import { Drawer, Button, List, Flex, Text } from '../index';
 import * as storyData from '../components/list/list.stories-data';
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -18,7 +18,7 @@ export default {
     width: '300px',
     closedWidth: '50px',
     top: undefined,
-    children: <div style={{ padding: 20 }}>Drawer content</div>,
+    children: <div style={{ padding: 20 }}> <Text>Drawer content</Text></div>,
   },
   argTypes: {
     button: { table: { disable: true } },
@@ -32,7 +32,7 @@ export default {
             padding: 20,
           }}
         >
-          Page content
+          <Text>Page content</Text>
         </div>
         {story()}
       </Flex>

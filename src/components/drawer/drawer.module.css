@@ -1,4 +1,8 @@
 
+.drawer {
+	background-color: var(--color-background);
+}
+
  .inline {
 	 position: relative;
 }
@@ -38,7 +42,7 @@
 	 transition: width 0.2s;
 	 scrollbar-width: none;
 	 -ms-overflow-style: none;
-     background-color: var(--color-background);
+
 }
  @media print {
 	 .drawerContent {
