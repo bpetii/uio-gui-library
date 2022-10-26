@@ -36,7 +36,7 @@ import { Button, Drawer } from '../../index';
             <Button
               onClick={() => setIsOpen(prev => !prev)}
               round
-              label={ <FaChevronLeft />}
+              label={startOpen ?<FaChevronRight /> : <FaChevronLeft /> }
             />
           )
         }
