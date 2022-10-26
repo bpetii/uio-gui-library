@@ -1,6 +1,6 @@
 {
   "name": "@bpetii/uio-gui-library",
-  "version": "0.1.40",
+  "version": "0.1.41",
   "description": "A react component library",
   "author": "Peter Biro",
   "dependencies": {
