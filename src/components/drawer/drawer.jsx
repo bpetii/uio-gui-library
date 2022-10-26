@@ -12,6 +12,7 @@ const Drawer = ({
   right,
   shadow,
   top,
+  bottom,
   width,
   closedWidth,
   button,
@@ -33,6 +34,7 @@ const Drawer = ({
       )}
       style={{
         top,
+        bottom
       }}
     >
       <div
@@ -70,6 +72,7 @@ Drawer.defaultProps = {
   closedWidth: 0,
   shadow: false,
   top: 0,
+  bottom: 0,
   button: null,
   buttonAnimate: true,
   buttonPosition: 'bottom',

@@ -8,7 +8,7 @@ import styles from './sidebar.module.css';
 import { Button, Drawer } from '../../index';
 
  const SideBar = memo(
-  ({ options, startOpen, onShiftClickToggleOpen, top, fixed }) => {
+  ({ options, startOpen, onShiftClickToggleOpen, top, bottom }) => {
     const [isOpen, setIsOpen] = useState(startOpen || false);
 
     const onClick = (evt, value, label, clickHandler) => {
@@ -24,12 +24,13 @@ import { Button, Drawer } from '../../index';
     const visible = options.sections.length > 0;
     return (
       <Drawer
-        fixed={fixed}
+        fixed
         open={isOpen}
         top={top}
         closedWidth={70}
         enableButton={visible}
         buttonPosition="bottom"
+        bottom={bottom}
         button={
           visible && (
             <Button
@@ -69,7 +70,7 @@ SideBar.defaultProps = {
   onShiftClickToggleOpen: () => {},
   top: undefined,
   options: [],
-  fixed: false
+  bottom: undefined
 };
 
 SideBar.propTypes = {

@@ -80,7 +80,6 @@ export default {
       title: 'Title',
       sections,
     },
-    fixed: true,
     startOpen: false,
   },
   argTypes: {
