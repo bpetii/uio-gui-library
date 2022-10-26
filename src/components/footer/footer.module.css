@@ -4,7 +4,7 @@
     left:0;
     right: 0;
     height: 75px;
-    background-color: var(--color-background-footer);
+    background-color: var(--color-background);
     padding: auto;
-    color: white;
+    color: var(--color-footer-text-color);
 }

@@ -16,6 +16,7 @@ html[data-theme='dark'] {
     --color-background-input: hsl(210deg 10% 28%);
     --color-background-footer: #3399ff;
     --color-footer-link: #cfd4d8;
+    --color-footer-text-color: #cfd4d8;
     --color-input-placeholder: #636e79;
     --color-listitem-hover: hsl(210deg 10% 28%);
     --color-listitem-active: #0e1d23;
