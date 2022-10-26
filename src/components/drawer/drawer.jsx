@@ -16,12 +16,14 @@ const Drawer = ({
   width,
   closedWidth,
   button,
+  isStandardButton,
   background,
   buttonPosition,
   hasFooter,
   border,
 }) => {
-  const isCustomButton = isValidElement(button);
+  const isCustomButton = !isStandardButton && isValidElement(button);
+  console.log(isCustomButton);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [open, setOpen] = !isCustomButton? useState(openProp): [openProp, null]
   const currentWidth = open ? width : closedWidth;
@@ -90,6 +92,7 @@ Drawer.defaultProps = {
   tabs: null,
   defaultTabIndex: 0,
   testId: undefined,
+  isStandardButton: true,
 };
 
 Drawer.propTypes = {

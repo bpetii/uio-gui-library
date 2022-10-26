@@ -30,6 +30,7 @@ import { Button, Drawer } from '../../index';
         buttonPosition="bottom"
         background={'#111315'}
         bottom={bottom}
+        isStandardButton={false}
         button={
           visible && (
             <Button
