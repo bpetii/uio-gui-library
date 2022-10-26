@@ -4,11 +4,11 @@ import cx from 'classnames';
 
 import styles from './page.module.css';
 
-const Page = ({ children, scroll, left, top, padding }) => {
+const Page = ({ children, scroll, left, top, padding, bottom }) => {
   return (
     <div
       className={cx(styles.page, scroll ? styles.scroll : '')}
-      style={{ left, padding , top }}
+      style={{ left, padding , top, bottom }}
     >
       {children}
     </div>
@@ -21,6 +21,7 @@ Page.defaultProps = {
   left: '70px',
   scroll: true,
   top: '60px',
+  bottom: '75px'
 };
 
 Page.propTypes = {
