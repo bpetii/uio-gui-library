@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import styles from './sidebar.module.css';
+import {Icon} from '../../index';
 
 export const Sections = ({ sections, onClick }) => {
   return (
@@ -24,7 +25,12 @@ export const Sections = ({ sections, onClick }) => {
                     onClick(evt, link.value, link.label, link.onClick)
                   }
                 >
-                  <span className={styles.label}>{link.label}</span>
+                   <>
+                    <span className={styles.icon}>
+                      <Icon icon={link.icon} size={30} color="white" />
+                    </span>
+                    <span className={styles.label}>{link.label}</span>
+                  </>
                 </a>
               );
             })}

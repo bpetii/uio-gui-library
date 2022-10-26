@@ -75,4 +75,26 @@
 	 transform: rotate(0deg);
 }
 
- 
+.icon {
+	margin-right: 10px;
+	line-height: 0;
+	flex-shrink: 0;
+	transition: opacity 0.4s;
+	opacity: 0.4;
+	display: block;
+}
+.item:hover .icon, .item:focus .icon {
+	opacity: 0.6;
+}
+.item:active .icon {
+	opacity: 0.8;
+}
+.item.active .icon {
+	opacity: 1;
+}
+.icon > * {
+	opacity: 1;
+}
+.icon > span {
+	display: block;
+}

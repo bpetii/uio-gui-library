@@ -10,6 +10,7 @@ const sections = [
         label: 'Section A',
         value: '/path/to/something',
         onClick: () => {},
+        icon: <FaAngleDoubleRight />,
       },
       {
         label: (
@@ -20,17 +21,20 @@ const sections = [
         ),
         value: '/path/to/something',
         onClick: () => {},
+        icon: <FaAngleDoubleRight />,
         isActive: true,
       },
       {
         label: 'Section C',
         value: '/path/to/something',
         onClick: () => {},
+        icon: <FaAngleDoubleRight />,
       },
       {
         label: 'Experimental Section',
         value: '/path/to/something',
         onClick: () => {},
+        icon: <FaAngleDoubleRight />,
         isExperimental: true,
       },
     ],
@@ -54,6 +58,7 @@ const sections = [
         label: 'Invalid Section',
         value: '/path/to/something',
         onClick: () => {},
+        icon: <FaAngleDoubleRight />,
         invalid: true,
       },
     ],
@@ -75,6 +80,7 @@ export default {
       title: 'Title',
       sections,
     },
+    fixed: true,
     startOpen: false,
   },
   argTypes: {
