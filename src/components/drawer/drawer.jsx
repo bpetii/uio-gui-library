@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React, {useState, isValidElement}  from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -21,7 +21,9 @@ const Drawer = ({
   hasFooter,
   border,
 }) => {
-  const [open, setOpen] = useState(openProp)
+  const isCustomButton = isValidElement(button);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [open, setOpen] = !isCustomButton? useState(openProp): [openProp, null]
   const currentWidth = open ? width : closedWidth;
 
   return (
@@ -52,11 +54,18 @@ const Drawer = ({
             buttonPosition === 'top' ? styles.top : styles.bottom,
           )}
         >
+          {isCustomButton
+            ? 
+              button
+            :
             <Button
-              onClick={setOpen ? () => setOpen(!open) : null}
+              onClick={setOpen ? () => {
+                setOpen(!open);
+              } : null}
               round
               label={right ? <FaChevronRight /> : <FaChevronLeft />}
             />
+            }
         </span>
       )}
     </div>

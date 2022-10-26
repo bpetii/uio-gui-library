@@ -1,14 +1,12 @@
-import React, { memo, useState } from 'react';
+import React, { useState } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import isEqual from 'react-fast-compare';
-import { FaArrowLeft } from 'react-icons/fa';
 import { Sections } from './sections.jsx';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import styles from './sidebar.module.css';
 import { Button, Drawer } from '../../index';
 
- const SideBar = memo(
-  ({ options, startOpen, onShiftClickToggleOpen, top, bottom }) => {
+ const SideBar = ({ options, startOpen, top, bottom }) => {
     const [isOpen, setIsOpen] = useState(startOpen || false);
 
     const onClick = (evt, value, label, clickHandler) => {
@@ -30,24 +28,19 @@ import { Button, Drawer } from '../../index';
         closedWidth={70}
         enableButton={visible}
         buttonPosition="bottom"
+        background={'#111315'}
         bottom={bottom}
         button={
           visible && (
             <Button
-              onClick={(evt) => {
-                if (evt.shiftKey) {
-                  onShiftClickToggleOpen(evt);
-                }
-                setIsOpen(!isOpen);
-              }}
-              colored
+              onClick={() => setIsOpen(prev => !prev)}
               round
-              icon={<FaArrowLeft />}
+              label={ <FaChevronLeft />}
             />
           )
         }
       >
-        <div className={cx(styles.sidebar, !isOpen ? styles.collapsed : '')}>
+        <div className={cx(styles.sidebar, !isOpen && styles.collapsed)}>
           {visible && (
             <div className={styles.inner}>
               <h4 className={styles.title}>{options.title}</h4>
@@ -61,13 +54,11 @@ import { Button, Drawer } from '../../index';
         </div>
       </Drawer>
     );
-  },
-  (prevProps, nextProps) => isEqual(prevProps, nextProps),
-);
+  }
+
 
 SideBar.defaultProps = {
   startOpen: false,
-  onShiftClickToggleOpen: () => {},
   top: undefined,
   options: [],
   bottom: undefined

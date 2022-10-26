@@ -18,10 +18,19 @@
 	 width: 0px;
 	 background: transparent;
 }
- .title, .subtitle, .label {
-	 transition: opacity 0.2s, max-height 0.2s, margin 0.2s, color 0.2s;
-	 max-height: 50px;
+
+.title, .subtitle, .label {
+	transition: opacity 0.2s, max-height 0.2s, margin 0.2s, color 0.2s;
+	max-height: 50px;
 }
+.collapsed .title, .collapsed .subtitle, .collapsed .label {
+	opacity: 0;
+	max-height: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+
  .title {
 	 overflow: hidden;
 	 max-width: 100%;
