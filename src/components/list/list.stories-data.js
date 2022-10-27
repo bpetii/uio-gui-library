@@ -21,7 +21,6 @@ export const list = {
 export const listCounts = {
   items: items.map((item) => ({
     ...item,
-    metaCount: 3,
   })),
 };
 

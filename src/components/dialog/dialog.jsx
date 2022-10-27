@@ -24,7 +24,7 @@ const Dialog = ({ dialog }) => {
       style={{ width, height }}
     >
       <div className={styles.header}>
-        <h2 top marginBottom={0}>
+        <h2>
           {heading}
         </h2>
         {onClose ? (

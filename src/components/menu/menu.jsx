@@ -22,7 +22,8 @@ const Menu = ({menu}) => {
               {menu.sections.map(section => {
                   switch(section.type) {
                     case "Option":  return(
-                      <div 
+                      <div
+                        key={section.label}
                         className={cx(styles.item, section.selected && styles.selected)} 
                         onClick={(e) => {
                         e.stopPropagation()
@@ -34,7 +35,8 @@ const Menu = ({menu}) => {
                       </div>
                       )
                     default: return(
-                      <div 
+                      <div
+                      key={section.label}
                       className={cx(styles.item, section.selected && styles.selected)} 
                       onClick={(e) => {
                         e.stopPropagation()
@@ -67,7 +69,7 @@ Menu.propTypes = {
       onClick: PropTypes.func,
       type: PropTypes.string,
     })),
-    component: PropTypes.elementType,
+    component: PropTypes.node,
     left: PropTypes.bool
   }),
 };
