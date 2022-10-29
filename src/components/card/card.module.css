@@ -31,6 +31,9 @@
 	 border-bottom-left-radius: inherit;
 	 border-bottom-right-radius: inherit;
 }
+.cardContent{
+	height: 100%;
+}
  .cardHeader {
 	 display: flex;
 	 align-items: center;
