@@ -28,7 +28,7 @@ import { Button, Drawer } from '../../index';
         closedWidth={70}
         enableButton={visible}
         buttonPosition="bottom"
-        background={'#111315'}
+        background={'var(--color-background-sidebar)'}
         bottom={bottom}
         isStandardButton={false}
         button={

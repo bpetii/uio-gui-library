@@ -25,5 +25,7 @@ html[data-theme='dark'] {
     --color-background-toggle: #5C5C5C;
     --color-background-tooltip: #97a1aa;
     --color-background-footer: #353b41;
+    --color-background-sidebar: #111315;
+    --color-active-sidebar: black
 
   }
