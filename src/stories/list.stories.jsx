@@ -24,10 +24,17 @@ const Template = (args) => {
   );
 };
 
-export const Default = Template.bind({});
+export const Default = Template.bind({
+  list: storyData.list,
+});
 
-export const Bordered = Template.bind({});
-Bordered.args = { bordered: true };
+export const Bordered = Template.bind({
+  list: storyData.list,
+});
+Bordered.args = { bordered: true,   list: storyData.list, };
+
+export const WithMetaData = Template.bind({});
+WithMetaData.args = { list: storyData.listWithMeta};
 
 export const Managed = () => {
   const [id, setId] = useState(null);

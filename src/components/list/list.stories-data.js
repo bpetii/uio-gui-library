@@ -17,6 +17,28 @@ export const list = {
   items,
 };
 
+export const itemsWithMeta = [
+  {
+    id: 1,
+    name: 'Aardvark',
+    metadata: 'Metadata 1'
+  },
+  {
+    id: 2,
+    name: 'Kangaroo',
+    metadata: 'Metadata 2'
+  },
+  {
+    id: 3,
+    name: 'Jaguar',
+    metadata: 'Metadata 3'
+  },
+];
+
+export const listWithMeta = {
+  items: itemsWithMeta
+}
+
 
 export const listCounts = {
   items: items.map((item) => ({

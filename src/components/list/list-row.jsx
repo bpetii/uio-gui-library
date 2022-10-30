@@ -25,6 +25,7 @@ export const ListRow = ({ items }) => {
             <div className={styles.name}>
               {item.name}
             </div>
+            <span className={styles.metadata}>{item.metadata}</span>
         </a>
       );
     };
