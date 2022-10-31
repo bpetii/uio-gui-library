@@ -48,10 +48,10 @@ html {
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
 }
-.table > :last-child > :last-child > :first-child {
+.table :last-child > :last-child > :first-child {
     border-bottom-left-radius: inherit;
 }
-.table > :last-child > :last-child > :last-child {
+.table :last-child > :last-child > :last-child {
     border-bottom-right-radius: inherit;
 }
 .maxHeight {
@@ -62,15 +62,14 @@ html {
     position: sticky;
     bottom: 0;
 }
-th, td {
+.table th, .table td {
     line-height: 17px;
     height: 36px;
     border-left: 1px solid #ddd;
 }
-th:first-child, td:first-child {
+.table th:first-child, .table td:first-child {
     border-left: none;
 }
-
 
 .cellWrapper {
     padding: 9.5px 14px !important;
