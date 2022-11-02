@@ -1,0 +1,23 @@
+ .textarea {
+	 margin: 0;
+	 display: block;
+	 width: 100%;
+	 max-width: 100%;
+	 outline: 0;
+	 text-align: left;
+	 padding: 9.5px 14px;
+	 background: var(--color-background-input);
+	 border: 1px solid var(--color-border);
+	 color: var(--color-text);
+	 border-radius: 4px;
+	 transition: box-shadow 0.1s ease, border-color 0.1s ease;
+	 box-shadow: none;
+	 min-height: 38px;
+}
+ .textarea::placeholder {
+	 color: var(--color-text-faint);
+}
+ .textarea:hover {
+	 border-color: var(--color-background-hover);
+}
+ 
