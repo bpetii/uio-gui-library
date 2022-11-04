@@ -16,7 +16,6 @@
  .list.bordered:last-child, .list.bordered:last-child > :last-child {
 	 border-bottom-left-radius: inherit;
 	 border-bottom-right-radius: inherit;
-	 border-bottom: 0;
 }
  .item {
 	 color: inherit;

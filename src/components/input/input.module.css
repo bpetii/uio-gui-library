@@ -45,7 +45,7 @@ input:disabled {
 }
 
 input.error {
-    border-color: hsl(0deg 40% 70%) !important;
+border-color: hsl(0deg 40% 70%) !important;
   color: hsl(0deg 40% 50%) !important;
   background-color: hsl(0deg 40% 90%);
   }
@@ -56,3 +56,10 @@ input.warning {
     background-color: hsl(48deg 40% 90%);
   }
 
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--color-background) inset !important;
+}

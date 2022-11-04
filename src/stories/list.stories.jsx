@@ -61,7 +61,7 @@ export const Managed = () => {
   }
 
   return (
-    <List list={list}
+    <List bordered list={list}
     />
   );
 }
