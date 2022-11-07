@@ -19,11 +19,11 @@ const Menu = ({menu}) => {
             {customuedTrigger || <Button label="Select" onClick={() => setOpen(prev => !prev)}/>}
             <div className={cx(styles.menu, (open && styles.open), (menu.left && styles.left))}>
               <div className={styles.menuContent}>
-              {menu.sections.map(section => {
+              {menu.sections.map((section,ix) => {
                   switch(section.type) {
                     case "Option":  return(
                       <div
-                        key={section.label}
+                        key={ix}
                         className={cx(styles.item, section.selected && styles.selected)} 
                         onClick={(e) => {
                         e.stopPropagation()
@@ -36,7 +36,7 @@ const Menu = ({menu}) => {
                       )
                     default: return(
                       <div
-                      key={section.label}
+                      key={ix}
                       className={cx(styles.item, section.selected && styles.selected)} 
                       onClick={(e) => {
                         e.stopPropagation()
