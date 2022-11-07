@@ -14,8 +14,6 @@ export default {
   },
 };
 
-console.log(storyData.list);
-
 const Template = (args) => {
   return (
     <List

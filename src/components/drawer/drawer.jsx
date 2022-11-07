@@ -23,7 +23,6 @@ const Drawer = ({
   border,
 }) => {
   const isCustomButton = !isStandardButton && isValidElement(button);
-  console.log(isCustomButton);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [open, setOpen] = !isCustomButton? useState(openProp): [openProp, null]
   const currentWidth = open ? width : closedWidth;

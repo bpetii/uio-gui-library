@@ -42,7 +42,6 @@ const StaticCell = (props) => {
       {cell.value}
     </div>
   );
-  console.log(cell.value);
   return (
     <div>
       {field}

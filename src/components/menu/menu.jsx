@@ -20,7 +20,6 @@ const Menu = ({menu}) => {
             <div className={cx(styles.menu, (open && styles.open), (menu.left && styles.left))}>
               <div className={styles.menuContent}>
               {menu.sections.map((section,ix) => {
-                console.log(ix);
                   switch(section.type) {
                     case "Option":  return(
                       <div

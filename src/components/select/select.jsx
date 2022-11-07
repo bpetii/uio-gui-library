@@ -43,10 +43,7 @@ const Select = ({
             }
             break;
           }
-          default: {
-            console.log({...e.target})
-            console.log(value);
-          }
+          default: {}
         }
       }
         containerRef.current?.addEventListener("keydown", handler);
