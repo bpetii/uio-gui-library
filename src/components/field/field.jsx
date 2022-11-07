@@ -8,9 +8,8 @@ const Field = ({
   label,
   labelLeft,
   labelWidth,
+  info,
   children,
-  helpText,
-  helpTextMaxWidth,
 }) => {
   return (
     <div
@@ -20,9 +19,8 @@ const Field = ({
         <Label
           label={label}
           width={labelWidth}
-          helpText={helpText}
-          helpTextMaxWidth={helpTextMaxWidth}
           labelLeft={labelLeft}
+          info={info}
         />
       )}
       <div className={styles.fieldInput}>{children}</div>
@@ -34,6 +32,7 @@ Field.defaultProps = {
   label: null,
   labelLeft: false,
   labelWidth: 'auto',
+  info: ''
 };
 
 Field.propTypes = {
@@ -44,6 +43,7 @@ Field.propTypes = {
   ]),
   /** Moves the label to the left of the input */
   labelLeft: PropTypes.bool,
+  info: PropTypes.string,
   labelWidth: PropTypes.string,
   children: PropTypes.node.isRequired,
 };

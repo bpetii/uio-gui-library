@@ -3,7 +3,7 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './label.module.css';
 import {FaInfoCircle} from 'react-icons/fa';
-import Tooltip from '../tooltip/tooltip';
+import Tooltip from '../tooltip/tooltip.jsx';
 
 const Label = ({
   label,
@@ -31,7 +31,7 @@ Label.defaultProps = {
   label: null,
   width: 'auto',
   labelLeft: false,
-  info: false,
+  info: '',
 };
 
 Label.propTypes = {
@@ -41,6 +41,7 @@ Label.propTypes = {
     PropTypes.node,
   ]),
   width: PropTypes.string,
+  info: PropTypes.string,
   labelLeft: PropTypes.bool,
 };
 

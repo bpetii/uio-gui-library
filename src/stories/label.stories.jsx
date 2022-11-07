@@ -22,5 +22,5 @@ export const LabelLeft = Template.bind({});
 LabelLeft.args = {labelLeft: true}
 
 export const WithInfo = Template.bind({});
-WithInfo.args = {info: true}
+WithInfo.args = {info: 'Info message goes here'}
 

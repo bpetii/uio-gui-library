@@ -26,3 +26,8 @@ LabelOnLeft.args = {
   labelWidth: '80px',
 };
 
+export const WithInfo = Template.bind({});
+WithInfo.args = {
+  info: 'Info message goes here'
+};
+
