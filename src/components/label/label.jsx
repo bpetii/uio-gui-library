@@ -40,8 +40,8 @@ Label.propTypes = {
     PropTypes.number,
     PropTypes.node,
   ]),
+  info: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   width: PropTypes.string,
-  info: PropTypes.string,
   labelLeft: PropTypes.bool,
 };
 

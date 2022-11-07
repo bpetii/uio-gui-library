@@ -43,7 +43,7 @@ Field.propTypes = {
   ]),
   /** Moves the label to the left of the input */
   labelLeft: PropTypes.bool,
-  info: PropTypes.string,
+  info: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   labelWidth: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
