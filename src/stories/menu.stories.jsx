@@ -17,7 +17,6 @@ const sections= [
     {
       disabled: true,
       label: 'Knight',
-      onClick: function noRefCheck(){},
       type: 'Option'
     },
     {

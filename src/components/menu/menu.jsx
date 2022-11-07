@@ -20,14 +20,16 @@ const Menu = ({menu}) => {
             <div className={cx(styles.menu, (open && styles.open), (menu.left && styles.left))}>
               <div className={styles.menuContent}>
               {menu.sections.map((section,ix) => {
+                console.log(ix);
                   switch(section.type) {
                     case "Option":  return(
                       <div
                         key={ix}
                         className={cx(styles.item, section.selected && styles.selected)} 
                         onClick={(e) => {
+                        if (typeof section.onClick !== 'function') return;
                         e.stopPropagation()
-                        section.onClick(e); 
+                        section?.onClick(e); 
                         setOpen(false);
                       }}
                       >
@@ -36,16 +38,17 @@ const Menu = ({menu}) => {
                       )
                     default: return(
                       <div
-                      key={ix}
-                      className={cx(styles.item, section.selected && styles.selected)} 
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        section.onClick(e); 
-                        setOpen(false);
-                      }}
-                      >
-                        {section.label}
-                      </div>
+                        key={ix}
+                        className={cx(styles.item, section.selected && styles.selected)} 
+                        onClick={(e) => {
+                          if (!typeof  section?.onClick !== 'function') return;
+                          e.stopPropagation()
+                          section?.onClick(e); 
+                          setOpen(false);
+                        }}
+                        >
+                          {section.label}
+                        </div>
                       )
                   }
                 })}    
