@@ -22,4 +22,17 @@
  .label > label span {
 	 line-height: 0;
 }
+
+.label .icons {
+    display: inline-flex;
+  }
+.label .icons > * {
+	margin-left: 8px;
+  }
+.label .icon {
+    margin-left: auto;
+    color: var(--color-text-muted);
+    line-height: 0;
+    font-size: 13px;
+  }
  

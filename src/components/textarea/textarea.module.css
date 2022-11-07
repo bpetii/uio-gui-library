@@ -6,7 +6,7 @@
 	 outline: 0;
 	 text-align: left;
 	 padding: 9.5px 14px;
-	 background: var(--color-background-input);
+	 background: var(--color-background);
 	 border: 1px solid var(--color-border);
 	 color: var(--color-text);
 	 border-radius: 4px;
@@ -17,7 +17,8 @@
  .textarea::placeholder {
 	 color: var(--color-text-faint);
 }
- .textarea:hover {
-	 border-color: var(--color-background-hover);
+ .textarea:hover, .textarea:focus {
+	 border-color: var(--color-border-input);
 }
+
  

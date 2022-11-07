@@ -21,3 +21,6 @@ export const Default = Template.bind({});
 export const LabelLeft = Template.bind({});
 LabelLeft.args = {labelLeft: true}
 
+export const WithInfo = Template.bind({});
+WithInfo.args = {info: true}
+
