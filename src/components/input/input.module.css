@@ -14,6 +14,7 @@
 	 font-weight: 400;
 	 font-style: normal;
 	 position: relative;
+	 caret-color: var(--color-text);
 }
  .input::placeholder {
 	 color: var(--color-input-placeholder);
@@ -24,6 +25,7 @@ input:disabled {
     background-color: var(--color-background-muted);
     color: var(--color-text-muted);
 }
+
 
  .input:hover, .input:focus {
 	 z-index: 1;
