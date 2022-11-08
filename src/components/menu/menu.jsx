@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import {Button} from '../../index';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import { Divider } from "./divider.jsx";
+import { Heading } from "./heading";
 import styles from './menu.module.css'
 
 const Menu = ({menu}) => {
@@ -35,20 +37,14 @@ const Menu = ({menu}) => {
                         {section.label}
                       </div>
                       )
-                    default: return(
-                      <div
-                        key={ix}
-                        className={cx(styles.item, section.selected && styles.selected)} 
-                        onClick={(e) => {
-                          if (!typeof  section?.onClick !== 'function') return;
-                          e.stopPropagation()
-                          section?.onClick(e); 
-                          setOpen(false);
-                        }}
-                        >
-                          {section.label}
-                        </div>
-                      )
+                      case 'Heading':
+                        return (
+                          <Heading
+                            label={section.label}
+                          />
+                        );
+                      case 'Divider': return <Divider />;
+                      default: return null;
                   }
                 })}    
               </div>  

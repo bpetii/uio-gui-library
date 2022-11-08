@@ -26,6 +26,37 @@ const sections= [
     }
   ];
 
+  const sectionsWithHeading= [
+    {
+      label: 'Vegetables',
+      onClick: function noRefCheck(){},
+      type: 'Heading'
+    },
+    {
+      label: 'Carrot',
+      onClick: function noRefCheck(){},
+      type: 'Option'
+    },
+    {
+      label: 'Broccoli',
+      onClick: function noRefCheck(){},
+      selected: true,
+      type: 'Option'
+    },
+    {
+      type: 'Divider'
+    },
+    {
+      label: 'Fruits',
+      onClick: function noRefCheck(){},
+      type: 'Heading'
+    },
+    {
+      label: 'Apple',
+      type: 'Option'
+    },
+  ];
+
 export default {
   title: 'Basic/Menu',
   component: Menu,
@@ -68,6 +99,11 @@ Left.args = {
         left: true
       },
     };
+
+export const WithHeading = Template.bind({});
+WithHeading.args = {
+    menu: {sections: sectionsWithHeading },
+  };
   
 
 

@@ -55,3 +55,18 @@
     background-color: var(--color-listitem-active);
     cursor: pointer;
 }
+
+.heading {
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+.divider {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+  }
+.heading {
+    padding: 8px 12px;
+  }
