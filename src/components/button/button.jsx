@@ -15,6 +15,7 @@ const Button = ({
   round,
   small,
   width,
+  fontSize,
   styles,
 }) => {
 
@@ -52,7 +53,7 @@ const Button = ({
       disabled={disabled}
       name={name}
       onClick={onClick}
-      style={{ width }}
+      style={{ width, fontSize }}
     >
       {label}
     </button>
@@ -71,6 +72,7 @@ Button.defaultProps = {
   small: false,
   styles: '',
   width: '',
+  fontSize: '',
   onClick: () => {},
 };
 
