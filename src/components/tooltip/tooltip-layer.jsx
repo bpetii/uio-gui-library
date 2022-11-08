@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Arrow } from 'react-laag';
 import cx from 'classnames';
 import styles from './tooltip.module.css';
+import { isArray } from 'lodash';
 
 export const TooltipLayer = ({
   text,
@@ -11,6 +12,15 @@ export const TooltipLayer = ({
   layerProps,
   arrowProps,
 }) => {
+  const convertArrayToLines= (text) => {
+    if (isArray(text)) {
+      return (<>
+        {text.map(line => <>{line} <br/> </>)}
+      </>)
+    } else {
+      return text;
+    }
+  }
   return (
     <div
       className={cx(
@@ -19,7 +29,7 @@ export const TooltipLayer = ({
       )}
       {...layerProps} // eslint-disable-line react/jsx-props-no-spreading
     >
-      <div>{text}</div>
+      <div>{convertArrayToLines(text)}</div>
       <Arrow
         {...arrowProps} // eslint-disable-line react/jsx-props-no-spreading
         size={6}

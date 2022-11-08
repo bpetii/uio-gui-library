@@ -50,3 +50,6 @@ Offset.args = { triggerOffset: 30 };
 
 export const ForceOpen = Template.bind({});
 ForceOpen.args = { forceOpen: true };
+
+export const BreakLine = Template.bind({});
+BreakLine.args = { text: ['This is a', 'new line'] };
