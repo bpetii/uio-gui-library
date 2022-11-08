@@ -37,3 +37,6 @@ Raised.args = { raised: true };
 
 export const RaisedWithHeading = Template.bind({});
 RaisedWithHeading.args = { raised: true, heading: <div>Heading</div> };
+
+export const WithInfo = Template.bind({});
+WithInfo.args = { heading: <div>Heading</div>, info:'Info text goes here' };

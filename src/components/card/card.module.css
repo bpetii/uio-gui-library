@@ -39,4 +39,17 @@
 	 align-items: center;
 	 padding: 0;
 }
+
+.card .icons {
+    margin-top:3px
+  }
+.card .icons > * {
+	margin-left: 4px;
+  }
+.card .icon {
+    margin-left: auto;
+    color: var(--color-text-muted);
+    line-height: 0;
+    font-size: 13px;
+  }
  

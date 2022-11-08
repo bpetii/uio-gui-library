@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import {FaInfoCircle} from 'react-icons/fa';
 import styles from './card.module.css';
+import Tooltip from '../tooltip/tooltip.jsx';
 
 const Card = ({
   bordered,
@@ -9,6 +11,7 @@ const Card = ({
   children,
   margin,
   padding,
+  info,
   raised,
 }) => {
   return (
@@ -20,7 +23,16 @@ const Card = ({
       )}
       style={{ margin }}
     >
-      {heading ? <div className={cx(styles.cardHeader)}>{heading}</div> : null}
+      {heading ? (<div className={cx(styles.cardHeader)}>
+        {heading}
+        <div className={styles.icons}>
+          {info && (
+            <Tooltip text={info}>
+                  <FaInfoCircle className={styles.icon} />
+            </Tooltip>
+          )}
+        </div>
+      </div>) : null}
       <div
         className={cx(
           styles.cardContent,
