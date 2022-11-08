@@ -30,6 +30,7 @@ const Input = forwardRef(
     return (
       <div style={{ width }}>
           <input
+            autocomplete="off"
             type={type}
             size={size || 20}
             placeholder={placeholder}
