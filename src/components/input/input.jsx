@@ -30,7 +30,7 @@ const Input = forwardRef(
     return (
       <div style={{ width }}>
           <input
-            autocomplete="off"
+            autoComplete="off"
             type={type}
             size={size || 20}
             placeholder={placeholder}
@@ -41,7 +41,6 @@ const Input = forwardRef(
             onBlur={onBlur}
             name={name}
             tabIndex={tabIndex}
-            autoComplete="off"
             disabled={disabled}
             className={cx(
               styles.input,
