@@ -3,7 +3,7 @@ import {Button} from '../../index';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import { Divider } from "./divider.jsx";
-import { Heading } from "./heading";
+import { Heading } from "./heading.jsx";
 import styles from './menu.module.css'
 
 const Menu = ({menu}) => {
