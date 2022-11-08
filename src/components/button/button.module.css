@@ -94,10 +94,10 @@
   width: '24px';
 }
 .blue {
-  background-color:  #3399ff;
+  background-color: var(--color-background-footer);
 }
 .blue:hover, .blue:focus {
-  background-color:  #3399ff;
+  background-color:  #1473d2;
 }
 .blue:active {
   background-color: #3399ff
