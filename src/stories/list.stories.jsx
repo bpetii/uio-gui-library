@@ -34,6 +34,9 @@ Bordered.args = { bordered: true,   list: storyData.list, };
 export const WithMetaData = Template.bind({});
 WithMetaData.args = { list: storyData.listWithMeta};
 
+export const Scrollable = Template.bind({});
+Scrollable.args = { list: storyData.listLong, scrollable: true};
+
 export const Managed = () => {
   const [id, setId] = useState(null);
   const list = {

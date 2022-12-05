@@ -8,12 +8,13 @@ import styles from './list.module.css';
 const List = ({
   list,
   bordered,
+  scrollable
 }) => {
 
   return (
     <Card bordered={bordered} padding={false}>
       <div
-        className={cx(styles.list, bordered ? styles.bordered : '')}
+        className={cx(styles.list, bordered ? styles.bordered : '', scrollable? styles.scrollable : '')}
           >
             <ListRow
               items={list.items}
